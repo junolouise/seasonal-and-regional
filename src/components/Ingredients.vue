@@ -1,13 +1,10 @@
 <template>
   <div id="ingredients">
     <ul>
-      <li
-        v-for="ingredient in ingredients"
-        v-on:click="ingredient.show = !ingredient.show"
-      >
+     
         <h2>{{ ingredient.name }}</h2>
         <h3 v-show="ingredient.show">{{ ingredient.season }}</h3>
-      </li>
+   
     </ul>
   </div>
 </template>
