@@ -20,5 +20,13 @@ npm run build
 npm run lint
 ```
 
+## Process
+
+To document our project we are using Trello and a Medium blog:
+
+https://trello.com/b/D1MoWCuX/hangry
+
+https://medium.com/@katierodgers95
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
