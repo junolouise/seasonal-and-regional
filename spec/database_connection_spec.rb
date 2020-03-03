@@ -14,4 +14,12 @@ describe DatabaseConnection do
       expect(DatabaseConnection.connection).to eq connection
     end
   end
+
+  describe '.query' do
+    it 'queries the database via PG' do
+      connection = DatabaseConnection.setup('hangry_development')
+      expect(connection).to receive(:exec).with("SELECT * FROM produce;")
+      DatabaseConnection.query("SELECT * FROM produce;")
+    end
+  end
 end
