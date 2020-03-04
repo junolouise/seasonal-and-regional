@@ -1,10 +1,19 @@
 <template>
   <div id="ingredients">
+    <input
+      type="text"
+      v-model="filterIngredients"
+      placeholder="search ingredients"
+    />
     <ul>
-     
+      <li
+        v-for="(ingredient, index) in filteredIngredients"
+        :key="index"
+        v-on:click="ingredient.show = !ingredient.show"
+      >
         <h2>{{ ingredient.name }}</h2>
         <h3 v-show="ingredient.show">{{ ingredient.season }}</h3>
-   
+      </li>
     </ul>
   </div>
 </template>
@@ -12,6 +21,7 @@
 export default {
   data() {
     return {
+      filterIngredients: "",
       ingredients: [
         {
           name: "Apple",
@@ -42,6 +52,13 @@ export default {
         { name: "Watercress", season: "May, Jun, Jul, Aug, Sep", show: false }
       ]
     };
+  },
+  computed: {
+    filteredIngredients: function() {
+      return this.ingredients.filter(ingredient => {
+        return ingredient.name.match(this.filterIngredients);
+      });
+    }
   }
 };
 </script>
@@ -53,6 +70,7 @@ export default {
   padding: 0 20px;
   box-sizing: border-box;
 }
+
 ul {
   display: flex;
   flex-wrap: wrap;
