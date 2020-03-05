@@ -1,9 +1,11 @@
 <template>
 	<div>
-		<app-header v-bind:component="component" v-on:changeComponent="updateComponent($event)"></app-header>
-		<keep-alive>
-			<component v-bind:is="component"></component>
-		</keep-alive>
+		<app-header></app-header>
+		<router-view>
+			<keep-alive>
+				<component v-bind:is="component"></component>
+			</keep-alive>
+		</router-view>
 		<app-footer></app-footer>
 	</div>
 </template>
@@ -25,12 +27,6 @@ export default {
 		return {
 			component: 'app-ingredients',
 		};
-	},
-	methods: {
-		updateComponent: function(updatedComponent) {
-			this.component = updatedComponent;
-			console.log('in App Vue updateComponent', this.component);
-		},
 	},
 };
 </script>

@@ -1,36 +1,17 @@
 <template>
 	<header>
 		<h1>{{ title }}</h1>
-		<p v-on:click="changeComponent">{{ componentLink }}</p>
+		<li><router-link to="/" exact>Ingredients</router-link></li>
+		<li><router-link to="/menus">Menus</router-link></li>
 	</header>
 </template>
 
 <script>
 export default {
-	props: {
-		component: {
-			type: String,
-			required: true,
-		},
-	},
 	data() {
 		return {
 			title: 'Seasonal Regional',
-			componentLink: 'menus',
 		};
-	},
-	methods: {
-		changeComponent: function() {
-			if (this.component == 'app-ingredients') {
-				this.componentLink = 'ingredients';
-				this.component = 'app-menus';
-			} else {
-				this.componentLink = 'menus';
-				this.component = 'app-ingredients';
-			}
-
-			this.$emit('changeComponent', this.component);
-		},
 	},
 };
 </script>
@@ -38,10 +19,30 @@ export default {
 <style scoped>
 header {
 	background: lightseagreen;
+	margin-bottom: 40px;
 	padding: 10px;
 }
 h1 {
 	color: #222;
 	text-align: center;
+}
+ul {
+	list-style-type: none;
+	text-align: center;
+	margin: 0;
+}
+li {
+	display: inline-block;
+	margin: 0 10px;
+}
+a {
+	color: #fff;
+	text-decoration: none;
+	padding: 6px 8px;
+	border-radius: 10px;
+}
+.router-link-active {
+	background: #eee;
+	color: #444;
 }
 </style>
