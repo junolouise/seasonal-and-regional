@@ -1,58 +1,32 @@
 <template>
 	<div id="menus">
-		<input type="text" v-model="filterMenus" placeholder="search menus" />
+		<!-- <input type="text" v-model="filterMenus" placeholder="search menus" /> -->
 		<ul>
-			<li v-for="(menu, index) in filteredmenus" :key="index" v-on:click="menu.show = !menu.show">
-				<h2>{{ menu.name }}</h2>
-				<h3 v-show="menu.show">{{ menu.carbon }}</h3>
+			<li v-for="(menu, index) in menus" :key="index">
+				<h2>{{ menu.recipe.label }}</h2>
+				<h3>{{ menu.recipe.calories }}</h3>
 			</li>
 		</ul>
+		{{menus}}
 	</div>
 </template>
 <script>
 export default {
 	data() {
 		return {
-			filterMenus: this.$route.params.name,
+			// filterMenus: this.$route.params.name,
 			search: 'search',
-			menus: [
-				{
-					name: 'Apple Pie',
-					carbon: '200mg',
-					show: false,
-				},
-				{ name: 'Asparagus and eggs', carbon: '300mg', show: false },
-				{
-					name: 'Beef Bourguignon',
-					carbon: '3 tonnes',
-					show: false,
-				},
-				{
-					name: 'Beetroot salad',
-					carbon: '100mg',
-					show: false,
-				},
-				{
-					name: 'Onion Soup',
-					carbon: '100mg',
-					show: false,
-				},
-				{
-					name: 'Mussels Soup',
-					carbon: '500mg',
-					show: false,
-				},
-				{ name: 'Watercress soup', carbon: '0mg', show: false },
-			],
+			menus: [],
 		};
 	},
-	computed: {
-		filteredmenus: function() {
-			return this.menus.filter(menu => {
-				return menu.name.match(this.filterMenus);
-			});
-		},
-	},
+	// computed: {
+	// 	filteredmenus: function() {
+	// 		return this.menus.filter(menu => {
+	// 			return menu.name.match(this.filterMenus);
+	// 		});
+	// 	},
+	// },
+	created() {this.$http.get('https://api.edamam.com/search?q=chicken&app_id=649a31c0&app_key=1cd135a5aa58498a06ad42aa6798aeeb').then(function(data){ this.menus = data.body.hits });}
 };
 </script>
 <style scoped>
@@ -80,3 +54,5 @@ li {
 	max-width: 300px;
 }
 </style>
+
+// https://api.edamam.com/search?q=chicken&app_id=${649a31c0}&app_key=${1cd135a5aa58498a06ad42aa6798aeeb}
