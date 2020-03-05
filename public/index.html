@@ -13,5 +13,28 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCeEXdHCml2I7ieN1epGgyHgnmv40dCWYo",
+    authDomain: "seasonal-regional.firebaseapp.com",
+    databaseURL: "https://seasonal-regional.firebaseio.com",
+    projectId: "seasonal-regional",
+    storageBucket: "seasonal-regional.appspot.com",
+    messagingSenderId: "96103047575",
+    appId: "1:96103047575:web:89426ad8b8981e3fe464d2",
+    measurementId: "G-TDNR11BWY6"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
   </body>
 </html>
