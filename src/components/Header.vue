@@ -18,12 +18,13 @@ export default {
 
 <style scoped>
 header {
-	background: lightseagreen;
+	background: rgb(51, 82, 36);
 	margin-bottom: 40px;
 	padding: 10px;
 }
 h1 {
-	color: #222;
+	font-family: Optima, sans-serif;
+	color: rgb(255, 255, 255);
 	text-align: center;
 }
 ul {

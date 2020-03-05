@@ -29,6 +29,7 @@ export default {
 </script>
 <style scoped>
 #menus {
+	background-color: rgb(50, 61, 50);
 	width: 100%;
 	margin: 40px auto;
 	padding: 0 30px;
@@ -36,8 +37,9 @@ export default {
 }
 h2 {
 	border-radius: 10px;
-	background: white;
-	opacity: 70%;
+	background: rgb(255, 255, 255);
+	opacity: 75%;
+	border: 1px solid #222;
 }
 ul {
 	display: flex;
@@ -46,7 +48,8 @@ ul {
 	padding: 0;
 }
 li {
-	align: center;
+	font-family: Optima, sans-serif;
+	color: rgb(34, 54, 31);
 	border-radius: 25px;
 	flex-grow: 1;
 	flex-basis: 300px;
