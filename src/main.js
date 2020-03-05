@@ -3,6 +3,9 @@ import App from './App.vue';
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource'
 import Routes from './routes';
+import { firestorePlugin } from 'vuefire'
+
+Vue.use(firestorePlugin)
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
