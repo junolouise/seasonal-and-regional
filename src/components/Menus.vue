@@ -37,7 +37,6 @@ export default {
 h2 {
 	border-radius: 10px;
 	background: white;
-	opacity: 90%;
 }
 ul {
 	display: flex;
@@ -56,7 +55,6 @@ li {
 	margin: 10px;
 	max-width: 240px;
 	min-height: 240px;
-	opacity: 95%;
 }
 </style>
 
