@@ -16,12 +16,14 @@ import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Ingredients from './components/Ingredients.vue';
 import Menus from './components/Menus.vue';
+import MenuDetail from './components/MenuDetail.vue';
 export default {
 	components: {
 		'app-header': Header,
 		'app-footer': Footer,
 		'app-ingredients': Ingredients,
 		'app-menus': Menus,
+		'app-menuDetail': MenuDetail,
 	},
 	data() {
 		return {

@@ -1,14 +1,10 @@
 <template>
-	<div id="menus">
-		<!-- <input type="text" v-model="filterMenus" placeholder="search menus" /> -->
+	<div id="menuDetail">
 		<ul>
 			<li v-for="(menu, index) in menus" :key="index" :style="{ backgroundImage: `url(${menu.recipe.image})` }">
-				<router-link to="/menuDetail" exact
-					><h2>{{ menu.recipe.label }}</h2></router-link
-				>
+				<h2>{{ menu.recipe.label }}</h2>
 			</li>
 		</ul>
-		{{ menus }}
 	</div>
 </template>
 <script>
@@ -27,21 +23,10 @@ export default {
 	// 		});
 	// 	},
 	// },
-	created() {
-		this.$http
-			.get(
-				'https://api.edamam.com/search?q=' +
-					this.$route.params.name +
-					'&app_id=649a31c0&app_key=1cd135a5aa58498a06ad42aa6798aeeb'
-			)
-			.then(function(data) {
-				this.menus = data.body.hits;
-			});
-	},
 };
 </script>
 <style scoped>
-#menus {
+#menuDetail {
 	width: 100%;
 	margin: 40px auto;
 	padding: 0 30px;

@@ -1,12 +1,8 @@
 <template>
 	<div id="ingredients">
-	<!--	<input type="text" v-model="filterIngredients" placeholder="search ingredients" /> -->
+		<!--	<input type="text" v-model="filterIngredients" placeholder="search ingredients" /> -->
 		<ul>
-			<router-link
-				v-for="(food, key, index) in foods"
-				:key="index"
-				v-bind:to="'/menus/' + food.name"
-			>
+			<router-link v-for="(food, key, index) in foods" :key="index" v-bind:to="'/menus/' + food.name">
 				<li>
 					<h2>{{ food.name }}</h2>
 				</li>
@@ -15,12 +11,12 @@
 	</div>
 </template>
 <script>
-import {db} from '.././config/db';
+import { db } from '.././config/db';
 export default {
 	data() {
 		return {
 			filterIngredients: '',
-      foods: [],
+			foods: [],
 			ingredients: [
 				{
 					name: 'Apple',
@@ -59,9 +55,9 @@ export default {
 	// 		});
 	// 	},
 	// },
-  created() {
-            db.ref('foods').once('value', storedValue => this.foods = storedValue.val());
-        }
+	created() {
+		db.ref('foods').once('value', storedValue => (this.foods = storedValue.val()));
+	},
 };
 </script>
 <style scoped>
