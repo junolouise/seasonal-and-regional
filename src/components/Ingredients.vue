@@ -2,7 +2,7 @@
 	<div id="ingredients">
 		<!--	<input type="text" v-model="filterIngredients" placeholder="search ingredients" /> -->
 		<ul>
-			<router-link v-for="(food, key, index) in foods" :key="index" v-bind:to="'/menus/' + food.name">
+			<router-link v-for="(food, key, index) in foods" :key="index" v-bind:to="'/recipes/' + food.name">
 				<li>
 					<h2>{{ food.name }}</h2>
 				</li>

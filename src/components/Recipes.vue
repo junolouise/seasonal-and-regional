@@ -1,20 +1,20 @@
 <template>
-	<div id="menus">
-		<!-- <input type="text" v-model="filterMenus" placeholder="search menus" /> -->
+	<div id="recipes">
+		<!-- <input type="text" v-model="filterrecipes" placeholder="search recipes" /> -->
 		<ul>
 			<li
-				v-for="(menu, index) in menus"
+				v-for="(recipe, index) in recipes"
 				:key="index"
-				:style="{ backgroundImage: `url(${menu.recipe.image})` }"
-				@click="storeRecipe(menu.recipe)"
+				:style="{ backgroundImage: `url(${recipe.recipe.image})` }"
+				@click="storeRecipe(recipe.recipe)"
 			>
-				<router-link to="/menuDetail" exact
-					><h2>{{ menu.recipe.label }}</h2></router-link
+				<router-link to="/recipeDetail" exact
+					><h2>{{ recipe.recipe.label }}</h2></router-link
 				>
 			</li>
 		</ul>
 
-		{{ menus }}
+		{{ recipes }}
 	</div>
 </template>
 <script>
@@ -22,9 +22,9 @@ import { store } from '../store.js';
 export default {
 	data() {
 		return {
-			// filterMenus: this.$route.params.name,
+			// filterrecipes: this.$route.params.name,
 			search: 'search',
-			menus: [],
+			recipes: [],
 		};
 	},
 	methods: {
@@ -34,9 +34,9 @@ export default {
 	},
 
 	// computed: {
-	// 	filteredmenus: function() {
-	// 		return this.menus.filter(menu => {
-	// 			return menu.name.match(this.filterMenus);
+	// 	filteredrecipes: function() {
+	// 		return this.recipes.filter(recipe => {
+	// 			return recipe.name.match(this.filterrecipes);
 	// 		});
 	// 	},
 	// },
@@ -48,13 +48,13 @@ export default {
 					'&app_id=649a31c0&app_key=1cd135a5aa58498a06ad42aa6798aeeb'
 			)
 			.then(function(data) {
-				this.menus = data.body.hits;
+				this.recipes = data.body.hits;
 			});
 	},
 };
 </script>
 <style scoped>
-#menus {
+#recipes {
 	width: 100%;
 	margin: 40px auto;
 	padding: 0 30px;

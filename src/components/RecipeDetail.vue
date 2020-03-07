@@ -1,5 +1,5 @@
 <template>
-	<div id="menuDetail">
+	<div id="recipeDetail">
 		<ul>
 			<li v-for="(ingredient, index) in storeState.recipe.ingredients" :key="index">
 				<p>{{ ingredient.text }} Weight: {{ ingredient.weight }}</p>
@@ -19,7 +19,7 @@ export default {
 };
 </script>
 <style scoped>
-#menuDetail {
+#recipeDetail {
 	width: 100%;
 	margin: 40px auto;
 	padding: 0 30px;
