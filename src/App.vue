@@ -15,15 +15,15 @@
 import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Ingredients from './components/Ingredients.vue';
-import Menus from './components/Menus.vue';
-import MenuDetail from './components/MenuDetail.vue';
+import Recipes from './components/Recipes.vue';
+import RecipeDetail from './components/RecipeDetail.vue';
 export default {
 	components: {
 		'app-header': Header,
 		'app-footer': Footer,
 		'app-ingredients': Ingredients,
-		'app-menus': Menus,
-		'app-menuDetail': MenuDetail,
+		'app-recipes': Recipes,
+		'app-recipeDetail': RecipeDetail,
 	},
 	data() {
 		return {

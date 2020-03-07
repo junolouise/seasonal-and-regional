@@ -1,10 +1,10 @@
-describe('Menus', function() {
-	it('Menus page has restful url', function() {
+describe('Recipes', function() {
+	it('Recipes page has restful url', function() {
 		cy.visit('https://seasonal-regional.herokuapp.com/');
 
-		cy.contains('Menus').click();
+		cy.contains('Recipes').click();
 
-		cy.url().should('include', '/menus');
+		cy.url().should('include', '/recipes');
 	});
 
 	it('Routes to correct url from selected ingredient', function() {
@@ -24,7 +24,7 @@ describe('Menus', function() {
 	});
 
 	it('Displays  the details of a recipe with weights for the selected recipe', function() {
-		cy.visit('https://seasonal-regional.herokuapp.com/menus/beef');
+		cy.visit('https://seasonal-regional.herokuapp.com/recipes/beef');
 		cy.contains('Beef').click({ force: true });
 
 		cy.contains('pepper');

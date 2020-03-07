@@ -4,6 +4,5 @@ export const store = {
 	},
 	addRecipe(newRecipe) {
 		this.state.recipe = newRecipe;
-		console.log('recipe string', this.state.recipe);
 	},
 };

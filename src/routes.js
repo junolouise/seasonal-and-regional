@@ -1,10 +1,10 @@
 import Ingredients from './components/Ingredients.vue';
-import Menus from './components/Menus.vue';
-import MenuDetail from './components/MenuDetail.vue';
+import Recipes from './components/Recipes.vue';
+import RecipeDetail from './components/RecipeDetail.vue';
 
 export default [
 	{ path: '/', component: Ingredients },
-	{ path: '/menus', component: Menus },
-	{ path: '/menus/:name', component: Menus },
-	{ path: '/menuDetail', component: MenuDetail },
+	{ path: '/Recipes', component: Recipes },
+	{ path: '/Recipes/:name', component: Recipes },
+	{ path: '/RecipeDetail', component: RecipeDetail },
 ];
