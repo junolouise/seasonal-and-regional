@@ -4,6 +4,16 @@
 ```
 npm install
 ```
+## Installation and running of Cypress
+to install
+```
+npm install cypress --save-dev
+```
+to run
+```
+node_modules/.bin/cypress open 
+```
+select the test file that you wish to run
 
 ### Compiles and hot-reloads for development
 ```

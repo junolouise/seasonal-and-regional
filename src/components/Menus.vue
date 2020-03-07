@@ -50,7 +50,6 @@ export default {
 h2 {
 	border-radius: 10px;
 	background: white;
-	opacity: 70%;
 }
 ul {
 	display: flex;
