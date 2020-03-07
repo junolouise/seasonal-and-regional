@@ -9,7 +9,6 @@ describe('Header.vue', () => {
         title: 'Seasonal Regional'
       }
     })
-    console.log(Header)
     expect(wrapper.text()).toBe(title)
   })
 })

@@ -1,11 +1,12 @@
 <template>
 	<div id="recipeDetail">
+		<div class='image' 		:style="{ backgroundImage: `url(${storeState.recipe.image})` }" >{{storeState.image}}</div> 
 		<ul>
 			<li v-for="(ingredient, index) in storeState.recipe.ingredients" :key="index">
-				<p>{{ ingredient.text }} Weight: {{ ingredient.weight }}</p>
+				<p>{{ ingredient.text }} </p>
+				<p>Weight: {{ Math.round(ingredient.weight) }} g </p>
 			</li>
 		</ul>
-		{{ storeState.recipe }}
 	</div>
 </template>
 <script>
@@ -34,17 +35,27 @@ ul {
 	display: flex;
 	flex-wrap: wrap;
 	list-style-type: none;
-	padding: 0;
+	padding: 50px;
+	border: 1px solid #222;
+	border-radius: 25px;
+	width: 40%;
 }
 li {
-	border-radius: 25px;
-	flex-grow: 1;
-	flex-basis: 300px;
-	text-align: center;
-	padding: 30px;
-	border: 1px solid #222;
-	margin: 10px;
-	max-width: 240px;
-	min-height: 240px;
+	font-family: courier, monospace;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 1em;
+	color: purple;
+	padding: 5px 15px;
+	list-style-type: circle;
+}
+.image {
+	height: 500px;
+	width: 50%;
+	overflow: hidden;
+  background-size: cover;
+  background-position: center;
+	float:right;
+	display: inline-block;
 }
 </style>
