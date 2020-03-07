@@ -2,16 +2,23 @@
 	<div id="menus">
 		<!-- <input type="text" v-model="filterMenus" placeholder="search menus" /> -->
 		<ul>
-			<li v-for="(menu, index) in menus" :key="index" :style="{ backgroundImage: `url(${menu.recipe.image})` }">
+			<li
+				v-for="(menu, index) in menus"
+				:key="index"
+				:style="{ backgroundImage: `url(${menu.recipe.image})` }"
+				@click="storeRecipe(menu.recipe)"
+			>
 				<router-link to="/menuDetail" exact
 					><h2>{{ menu.recipe.label }}</h2></router-link
 				>
 			</li>
 		</ul>
+
 		{{ menus }}
 	</div>
 </template>
 <script>
+import { store } from '../store.js';
 export default {
 	data() {
 		return {
@@ -20,6 +27,12 @@ export default {
 			menus: [],
 		};
 	},
+	methods: {
+		storeRecipe(recipe) {
+			store.addRecipe(recipe);
+		},
+	},
+
 	// computed: {
 	// 	filteredmenus: function() {
 	// 		return this.menus.filter(menu => {

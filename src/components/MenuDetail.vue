@@ -1,28 +1,21 @@
 <template>
 	<div id="menuDetail">
 		<ul>
-			<li v-for="(menu, index) in menus" :key="index" :style="{ backgroundImage: `url(${menu.recipe.image})` }">
-				<h2>{{ menu.recipe.label }}</h2>
+			<li v-for="(ingredient, index) in storeState.recipe.ingredients" :key="index">
+				<p>{{ ingredient.text }} Weight: {{ ingredient.weight }}</p>
 			</li>
 		</ul>
+		{{ storeState.recipe }}
 	</div>
 </template>
 <script>
+import { store } from '../store.js';
 export default {
 	data() {
 		return {
-			// filterMenus: this.$route.params.name,
-			search: 'search',
-			menus: [],
+			storeState: store.state,
 		};
 	},
-	// computed: {
-	// 	filteredmenus: function() {
-	// 		return this.menus.filter(menu => {
-	// 			return menu.name.match(this.filterMenus);
-	// 		});
-	// 	},
-	// },
 };
 </script>
 <style scoped>
@@ -55,5 +48,3 @@ li {
 	min-height: 240px;
 }
 </style>
-
-// https://api.edamam.com/search?q=chicken&app_id=${649a31c0}&app_key=${1cd135a5aa58498a06ad42aa6798aeeb}
