@@ -17,6 +17,8 @@ import Footer from './components/Footer.vue';
 import Ingredients from './components/Ingredients.vue';
 import Recipes from './components/Recipes.vue';
 import RecipeDetail from './components/RecipeDetail.vue';
+import Map from './components/Map.vue';
+
 export default {
 	components: {
 		'app-header': Header,
@@ -24,6 +26,7 @@ export default {
 		'app-ingredients': Ingredients,
 		'app-recipes': Recipes,
 		'app-recipeDetail': RecipeDetail,
+		'app-map': Map,
 	},
 	data() {
 		return {

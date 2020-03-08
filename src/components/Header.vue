@@ -3,6 +3,7 @@
 		<h1>{{ title }}</h1>
 		<li><router-link to="/" exact>Ingredients</router-link></li>
 		<li><router-link to="/recipes">Recipes</router-link></li>
+		<li><router-link to="/map">Map Farmers Markets</router-link></li>
 	</header>
 </template>
 
