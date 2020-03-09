@@ -75,4 +75,7 @@ li {
 	margin: 10px;
 	max-width: 300px;
 }
+.switchedOn {
+	background-color: green;
+}
 </style>
