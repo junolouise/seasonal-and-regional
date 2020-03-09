@@ -2,10 +2,10 @@
 <div>
 	<div id="ingredients">
 		<!--	<input type="text" v-model="filterIngredients" placeholder="search ingredients" /> -->
-		<button	v-for='(month, index) in filterMonth' :key="index" @click='filter=food' :class='{ active: food == filter }'>
+		<button	v-for='(month, index) in filterMonth' :key="index" @click='clickOnMonth(index)' :id="index" :class="{switchedOn: toggledMonth == index}">
 		{{ month }} </button>
 		<ul>
-			<router-link v-for="(food) in filteredJanuary" :key="food.name" v-bind:to="'/recipes/' + food.name">
+			<router-link v-for="(food) in selectedMonth" :key="food.name" v-bind:to="'/recipes/' + food.name">
 				<li>
 					
 					<h2> {{ food.name }} </h2>
@@ -25,12 +25,18 @@ export default {
 			filterMonth: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 			filter: 'All',
 			foods: [],
+			toggledMonth: 0,
 		};
 	},
+	methods: {
+        clickOnMonth: function(number) {
+			this.toggledMonth = number
+		}
+	},
 	computed: {
-		filteredJanuary: function() {
+		selectedMonth: function() {
 			return this.foods.filter(food =>
-				(food.months[0] === 1))
+				(food.months[this.toggledMonth] === 1))
 		}
 	},
 	// computed: {
