@@ -1,3 +1,758 @@
-{
-  "foods":
-  [{"id":1,"name":"apple","date range 1":"[2020-01-01,2020-02-29)","date range 2":"[2020-09-01,2020-12-31)"},{"id":2,"name":"apricot","date range 1":"[2020-05-01,2020-09-30)","date range 2":null},{"id":3,"name":"asparagus","date range 1":"[2020-06-01,2020-07-31)","date range 2":null},{"id":4,"name":"aubergine","date range 1":"[2020-06-01,2020-10-31)","date range 2":null},{"id":5,"name":"banana","date range 1":"[2020-01-01,2020-12-31)","date range 2":null},{"id":6,"name":"basil","date range 1":"[2020-07-01,2020-08-31)","date range 2":null},{"id":7,"name":"beef","date range 1":"[2020-01-01,2020-12-31)","date range 2":null},{"id":8,"name":"beetroot","date range 1":"[2020-01-01,2020-01-31)","date range 2":"[2020-07-01,2020-12-31)"},{"id":9,"name":"blackberry","date range 1":"[2020-08-01,2020-10-31)","date range 2":null},{"id":10,"name":"blackcurrants","date range 1":"[2020-06-01,2020-07-31)","date range 2":null},{"id":11,"name":"bramley apple","date range 1":"[2020-01-01,2020-03-31)","date range 2":"[2020-12-01,2020-12-31)"},{"id":12,"name":"broad bean","date range 1":"[2020-07-01,2020-09-30)","date range 2":null},{"id":13,"name":"broccoli","date range 1":"[2020-08-01,2020-10-31)","date range 2":null},{"id":14,"name":"brussels sprouts","date range 1":"[2020-01-01,2020-03-31)","date range 2":"[2020-10-01,2020-12-31)"},{"id":15,"name":"cabbage","date range 1":"[2020-01-01,2020-12-31)","date range 2":null},{"id":16,"name":"carrot","date range 1":"[2020-06-01,2020-09-30)","date range 2":null},{"id":17,"name":"cauliflower","date range 1":"[2020-01-01,2020-04-30)","date range 2":null},{"id":18,"name":"cavolo nero","date range 1":"[2020-07-01,2020-10-31)","date range 2":null},{"id":29,"name":"celeriac","date range 1":"[2020-01-01,2020-04-30)","date range 2":"[2020-09-01,2020-12-31)"},{"id":30,"name":"celery","date range 1":"[2020-01-01,2020-02-29)","date range 2":"[2020-08-01,2020-12-31)"},{"id":31,"name":"cherry","date range 1":"[2020-07-01,2020-07-31)","date range 2":null},{"id":32,"name":"chervil","date range 1":"[2020-05-01,2020-09-30)","date range 2":null},{"id":33,"name":"chestnut","date range 1":"[2020-01-01,2020-01-31)","date range 2":"[2020-10-01,2020-12-31)"},{"id":34,"name":"chicken","date range 1":"[2020-01-01,2020-12-31)","date range 2":null},{"id":35,"name":"chicory","date range 1":"[2020-01-01,2020-03-31)","date range 2":null},{"id":36,"name":"clementine","date range 1":"[2020-01-01,2020-02-29)","date range 2":"[2020-11-01,2020-12-31)"},{"id":37,"name":"cod","date range 1":"[2020-02-01,2020-04-30)","date range 2":null},{"id":38,"name":"courgette","date range 1":"[2020-06-01,2020-09-30)","date range 2":null},{"id":51,"name":"courgette flower","date range 1":"[2020-06-01,2020-08-31)","date range 2":null},{"id":52,"name":"crab","date range 1":"[2020-04-01,2020-11-30)","date range 2":null},{"id":53,"name":"crab apple","date range 1":"[2020-08-01,2020-08-31)","date range 2":null},{"id":54,"name":"cranberry","date range 1":"[2020-10-01,2020-12-31)","date range 2":null},{"id":55,"name":"damson","date range 1":"[2020-09-01,2020-09-30)","date range 2":null},{"id":56,"name":"date","date range 1":"[2020-01-01,2020-01-31)","date range 2":"[2020-11-01,2020-12-31)"},{"id":57,"name":"duck","date range 1":"[2020-10-01,2020-12-31)","date range 2":null},{"id":58,"name":"elderberries","date range 1":"[2020-08-01,2020-10-31)","date range 2":null},{"id":59,"name":"fennel bulb","date range 1":"[2020-06-01,2020-09-30)","date range 2":null},{"id":60,"name":"fig","date range 1":"[2020-08-01,2020-10-31)","date range 2":null},{"id":61,"name":"garlic","date range 1":"[2020-07-01,2020-10-31)","date range 2":null},{"id":62,"name":"globe artichoke","date range 1":"[2020-06-01,2020-11-30)","date range 2":null},{"id":63,"name":"goose","date range 1":"[2020-01-01,2020-01-31)","date range 2":"[2020-09-01,2020-12-31)"},{"id":64,"name":"gooseberry","date range 1":"[2020-06-01,2020-09-30)","date range 2":null},{"id":65,"name":"grapefruit","date range 1":"[2020-01-01,2020-05-31)","date range 2":"[2020-12-01,2020-12-31)"},{"id":66,"name":"grouse","date range 1":"[2020-08-01,2020-12-31)","date range 2":null},{"id":67,"name":"guinea fowl","date range 1":"[2020-09-01,2020-11-30)","date range 2":null},{"id":68,"name":"halibut","date range 1":"[2020-03-01,2020-09-30)","date range 2":null},{"id":69,"name":"jerusalem artichoke","date range 1":"[2020-01-01,2020-03-31)","date range 2":"[2020-11-01,2020-12-31)"},{"id":70,"name":"kale","date range 1":"[2020-01-01,2020-02-29)","date range 2":"[2020-10-01,2020-12-31)"},{"id":71,"name":"kipper","date range 1":"[2020-05-01,2020-09-30)","date range 2":null},{"id":72,"name":"kohlrabi","date range 1":"[2020-08-01,2020-11-30)","date range 2":null},{"id":75,"name":"lamb","date range 1":"[2020-01-01,2020-12-31)","date range 2":null},{"id":76,"name":"lamb's lettuce","date range 1":"[2020-05-01,2020-11-30)","date range 2":null},{"id":77,"name":"leek","date range 1":"[2020-01-01,2020-03-31)","date range 2":"[2020-09-01,2020-12-31)"},{"id":78,"name":"lemon","date range 1":"[2020-01-01,2020-03-31)","date range 2":null},{"id":79,"name":"lettuce","date range 1":"[2020-05-01,2020-12-31)","date range 2":null},{"id":80,"name":"loganberry","date range 1":"[2020-08-01,2020-09-30)","date range 2":null},{"id":81,"name":"mackerel","date range 1":"[2020-05-01,2020-10-31)","date range 2":null},{"id":82,"name":"mangetout","date range 1":"[2020-06-01,2020-08-31)","date range 2":null},{"id":83,"name":"marrow","date range 1":"[2020-08-01,2020-09-30)","date range 2":null},{"id":84,"name":"mint","date range 1":"[2020-05-01,2020-09-30)","date range 2":null},{"id":85,"name":"mussels","date range 1":"[2020-01-01,2020-03-31)","date range 2":"[2020-10-01,2020-12-31)"},{"id":86,"name":"nectarine","date range 1":"[2020-05-01,2020-09-30)","date range 2":null},{"id":87,"name":"new potatoes","date range 1":"[2020-04-01,2020-07-31)","date range 2":null},{"id":88,"name":"onion","date range 1":"[2020-01-01,2020-12-31)","date range 2":null},{"id":89,"name":"orange","date range 1":"[2020-01-01,2020-03-31)","date range 2":null},{"id":90,"name":"oyster","date range 1":"[2020-01-01,2020-04-30)","date range 2":"[2020-09-01,2020-12-31)"},{"id":91,"name":"pak choi","date range 1":"[2020-01-01,2020-12-31)","date range 2":null},{"id":92,"name":"parsnip","date range 1":"[2020-01-01,2020-03-31)","date range 2":"[2020-09-01,2020-12-31)"},{"id":98,"name":"peach","date range 1":"[2020-08-01,2020-09-30)","date range 2":null},{"id":99,"name":"pear","date range 1":"[2020-01-01,2020-01-31)","date range 2":"[2020-09-01,2020-12-31)"},{"id":100,"name":"peas","date range 1":"[2020-05-01,2020-09-30)","date range 2":null},{"id":101,"name":"pepper","date range 1":"[2020-03-01,2020-10-31)","date range 2":null},{"id":102,"name":"plum","date range 1":"[2020-09-01,2020-10-31)","date range 2":null},{"id":103,"name":"pomegranate","date range 1":"[2020-01-01,2020-12-31)","date range 2":null},{"id":104,"name":"pork","date range 1":"[2020-01-01,2020-12-31)","date range 2":null},{"id":105,"name":"potato","date range 1":"[2020-04-01,2020-07-31)","date range 2":null},{"id":106,"name":"pumpkin","date range 1":"[2020-10-01,2020-12-31)","date range 2":null},{"id":107,"name":"purple sprouting broccoli","date range 1":"[2020-02-01,2020-04-30)","date range 2":null},{"id":108,"name":"quince","date range 1":"[2020-10-01,2020-12-31)","date range 2":null},{"id":109,"name":"radicchio","date range 1":"[2020-01-01,2020-12-31)","date range 2":null},{"id":110,"name":"radish","date range 1":"[2020-05-01,2020-10-31)","date range 2":null},{"id":111,"name":"raspberry","date range 1":"[2020-07-01,2020-09-30)","date range 2":null},{"id":112,"name":"redcurrant","date range 1":"[2020-07-01,2020-09-30)","date range 2":null},{"id":113,"name":"rhubarb","date range 1":"[2020-01-01,2020-06-30)","date range 2":null},{"id":114,"name":"runner bean","date range 1":"[2020-06-01,2020-09-30)","date range 2":null},{"id":115,"name":"salmon","date range 1":"[2020-03-01,2020-09-30)","date range 2":null},{"id":116,"name":"salsify","date range 1":"[2020-01-01,2020-01-31)","date range 2":"[2020-10-01,2020-12-31)"},{"id":117,"name":"samphire","date range 1":"[2020-07-01,2020-08-31)","date range 2":null},{"id":118,"name":"sorrel","date range 1":"[2020-04-01,2020-09-30)","date range 2":null},{"id":119,"name":"spinach","date range 1":"[2020-04-01,2020-09-30)","date range 2":null},{"id":120,"name":"spring greens","date range 1":"[2020-04-01,2020-06-30)","date range 2":null},{"id":128,"name":"spring lamb","date range 1":"[2020-02-01,2020-06-30)","date range 2":null},{"id":129,"name":"spring onion","date range 1":"[2020-01-01,2020-12-31)","date range 2":null},{"id":130,"name":"strawberry","date range 1":"[2020-06-01,2020-09-30)","date range 2":null},{"id":131,"name":"swede","date range 1":"[2020-01-01,2020-02-29)","date range 2":"[2020-11-01,2020-12-31)"},{"id":132,"name":"sweet potato","date range 1":"[2020-01-01,2020-03-31)","date range 2":"[2020-10-01,2020-12-31)"},{"id":133,"name":"sweetcorn ","date range 1":"[2020-09-01,2020-09-30)","date range 2":null},{"id":134,"name":"swiss chard","date range 1":"[2020-07-01,2020-11-30)","date range 2":null},{"id":135,"name":"tayberry","date range 1":"[2020-07-01,2020-08-31)","date range 2":null},{"id":136,"name":"tomato","date range 1":"[2020-06-01,2020-10-31)","date range 2":null},{"id":137,"name":"tuna","date range 1":"[2020-05-01,2020-09-30)","date range 2":null},{"id":138,"name":"turkey","date range 1":"[2020-12-01,2020-12-31)","date range 2":null},{"id":139,"name":"turnip","date range 1":"[2020-01-01,2020-02-29)","date range 2":"[2020-10-01,2020-12-31)"},{"id":140,"name":"venison","date range 1":"[2020-01-01,2020-02-29)","date range 2":"[2020-11-01,2020-12-31)"},{"id":141,"name":"watercress","date range 1":"[2020-04-01,2020-09-30)","date range 2":null},{"id":142,"name":"watermelon","date range 1":"[2020-07-01,2020-08-31)","date range 2":null},{"id":143,"name":"white asparagus","date range 1":"[2020-04-01,2020-05-01)","date range 2":null},{"id":144,"name":"whiting","date range 1":"[2020-01-01,2020-02-29)","date range 2":"[2020-06-01,2020-12-31)"}]}
+[
+  {
+    "id": 1,
+    "name": "apple",
+    "months": [1,1,0,0,0,0,0,0,1,1,1,1],
+    "seasonal_co2": "24",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 2,
+    "name": "apricot",
+    "months": [0,0,0,0,1,1,1,1,1,0,0,0],
+    "seasonal_co2": "20",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 3,
+    "name": "asparagus",
+    "months": [0,0,0,0,0,1,1,0,0,0,0,0],
+    "seasonal_co2": "93",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 4,
+    "name": "aubergine",
+    "months": [0,0,0,0,0,1,1,1,1,1,0,0],
+    "seasonal_co2": "12",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 5,
+    "name": "banana",
+    "months": [1,1,1,1,1,1,1,1,1,1,1,1],
+    "seasonal_co2": "48",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 6,
+    "name": "basil",
+    "months": [0,0,0,0,0,0,1,1,0,0,0,0],
+    "seasonal_co2": "27",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 7,
+    "name": "beef",
+    "months": [1,1,1,1,1,1,1,1,1,1,1,1],
+    "seasonal_co2": "5577",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 8,
+    "name": "beetroot",
+    "months": [1,0,0,0,0,0,1,1,1,1,1,1],
+    "seasonal_co2": "37",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 9,
+    "name": "blackberry",
+    "months": [0,0,0,0,0,0,0,1,1,1,0,0],
+    "seasonal_co2": "42",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 10,
+    "name": "blackcurrants",
+    "months": [0,0,0,0,0,1,1,0,0,0,0,0],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 11,
+    "name": "bramley apple",
+    "months": [1,1,1,0,0,0,0,0,0,0,0,1],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 12,
+    "name": "broad bean",
+    "months": [0,0,0,0,0,0,1,1,1,0,0,0],
+    "seasonal_co2": "140",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 13,
+    "name": "broccoli",
+    "months": [0,0,0,0,0,0,0,1,1,1,0,0],
+    "seasonal_co2": "44",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 14,
+    "name": "brussels sprouts",
+    "months": [1,1,1,0,0,0,0,0,0,1,1,1],
+    "seasonal_co2": "57",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 15,
+    "name": "cabbage",
+    "months": [1,1,1,1,1,1,1,1,1,1,1,1],
+    "seasonal_co2": "32",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 16,
+    "name": "carrot",
+    "months": [0,0,0,0,0,1,1,1,1,0,0,0],
+    "seasonal_co2": "30",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 17,
+    "name": "cauliflower",
+    "months": [1,1,1,1,0,0,0,0,0,0,0,0],
+    "seasonal_co2": "39",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 18,
+    "name": "cavolo nero",
+    "months": [0,0,0,0,0,0,1,1,1,1,0,0],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 29,
+    "name": "celeriac",
+    "months": [1,1,1,1,0,0,0,0,1,1,1,1],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 30,
+    "name": "celery",
+    "months": [1,1,0,0,0,0,0,1,1,1,1,1],
+    "seasonal_co2": "41",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 31,
+    "name": "cherry",
+    "months": [0,0,0,0,0,0,1,0,0,0,0,0],
+    "seasonal_co2": "26",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 32,
+    "name": "chervil",
+    "months": [0,0,0,0,1,1,1,1,1,0,0,0],
+    "seasonal_co2": "36",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 33,
+    "name": "chestnut",
+    "months": [1,0,0,0,0,0,0,0,0,1,1,1],
+    "seasonal_co2": "218",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 34,
+    "name": "chicken",
+    "months": [1,1,1,1,1,1,1,1,1,1,1,1],
+    "seasonal_co2": "451",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 35,
+    "name": "chicory",
+    "months": [1,1,1,0,0,0,0,0,0,0,0,0],
+    "seasonal_co2": "35",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 36,
+    "name": "clementine",
+    "months": [1,1,0,0,0,0,0,0,0,0,1,1],
+    "seasonal_co2": "49",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 37,
+    "name": "cod",
+    "months": [0,1,1,1,0,0,0,0,0,0,0,0],
+    "seasonal_co2": "514",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 38,
+    "name": "courgette",
+    "months": [0,0,0,0,0,1,1,1,1,0,0,0],
+    "seasonal_co2": "214",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 51,
+    "name": "courgette flower",
+    "months": [0,0,0,0,0,1,1,1,0,0,0,0],
+    "seasonal_co2": "214",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 52,
+    "name": "crab",
+    "months": [0,0,0,1,1,1,1,1,1,1,1,0],
+    "seasonal_co2": "684",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 53,
+    "name": "crab apple",
+    "months": [0,0,0,0,0,0,0,1,0,0,0,0],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 54,
+    "name": "cranberry",
+    "months": [0,0,0,0,0,0,0,0,0,1,1,1],
+    "seasonal_co2": "32",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 55,
+    "name": "damson",
+    "months": [0,0,0,0,0,0,0,0,1,0,0,0],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 56,
+    "name": "date",
+    "months": [1,0,0,0,0,0,0,0,0,0,1,1],
+    "seasonal_co2": "294",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 57,
+    "name": "duck",
+    "months": [0,0,0,0,0,0,0,0,0,1,1,1],
+    "seasonal_co2": "391",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 58,
+    "name": "elderberries",
+    "months": [0,0,0,0,0,0,0,1,1,1,0,0],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 59,
+    "name": "fennel bulb",
+    "months": [0,0,0,0,0,1,1,1,1,0,0,0],
+    "seasonal_co2": "44",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 60,
+    "name": "fig",
+    "months": [0,0,0,0,0,0,0,1,1,1,0,0],
+    "seasonal_co2": "72",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 61,
+    "name": "garlic",
+    "months": [0,0,0,0,0,0,1,1,1,1,0,0],
+    "seasonal_co2": "100",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 62,
+    "name": "globe artichoke",
+    "months": [0,0,0,0,0,1,1,1,1,1,1,0],
+    "seasonal_co2": "28",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 63,
+    "name": "goose",
+    "months": [1,0,0,0,0,0,0,0,1,1,1,1],
+    "seasonal_co2": "451",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 64,
+    "name": "gooseberry",
+    "months": [0,0,0,0,0,1,1,1,1,0,0,0],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 65,
+    "name": "grapefruit",
+    "months": [1,1,1,1,1,0,0,0,0,0,0,1],
+    "seasonal_co2": "82",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 66,
+    "name": "grouse",
+    "months": [0,0,0,0,0,0,0,1,1,1,1,1],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 67,
+    "name": "guinea fowl",
+    "months": [0,0,0,0,0,0,0,0,1,1,1,0],
+    "seasonal_co2": "494",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 68,
+    "name": "halibut",
+    "months": [0,0,1,1,1,1,1,1,1,0,0,0],
+    "seasonal_co2": "389",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 69,
+    "name": "jerusalem artichoke",
+    "months": [1,1,1,0,0,0,0,0,0,0,1,1],
+    "seasonal_co2": "28",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 70,
+    "name": "kale",
+    "months": [1,1,0,0,0,0,0,0,0,1,1,1],
+    "seasonal_co2": "29",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 71,
+    "name": "kipper",
+    "months": [0,0,0,0,1,1,1,1,1,0,0,0],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 72,
+    "name": "kohlrabi",
+    "months": [0,0,0,0,0,0,0,1,1,1,1,0],
+    "seasonal_co2": "28",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 75,
+    "name": "lamb",
+    "months": [1,1,1,1,1,1,1,1,1,1,1,1],
+    "seasonal_co2": "1031",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 76,
+    "name": "lamb's lettuce",
+    "months": [0,0,0,0,1,1,1,1,1,1,1,0],
+    "seasonal_co2": "27",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 77,
+    "name": "leek",
+    "months": [1,1,1,0,0,0,0,0,1,1,1,1],
+    "seasonal_co2": "41",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 78,
+    "name": "lemon",
+    "months": [1,1,1,0,0,0,0,0,0,0,0,0],
+    "seasonal_co2": "52",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 79,
+    "name": "lettuce",
+    "months": [0,0,0,0,1,1,1,1,1,1,1,1],
+    "seasonal_co2": "142",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 80,
+    "name": "loganberry",
+    "months": [0,0,0,0,0,0,0,1,1,0,0,0],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 81,
+    "name": "mackerel",
+    "months": [0,0,0,0,1,1,1,1,1,1,0,0],
+    "seasonal_co2": "228",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 82,
+    "name": "mangetout",
+    "months": [0,0,0,0,0,1,1,1,0,0,0,0],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 83,
+    "name": "marrow",
+    "months": [0,0,0,0,0,0,0,1,1,0,0,0],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 84,
+    "name": "mint",
+    "months": [0,0,0,0,1,1,1,1,1,0,0,0],
+    "seasonal_co2": "72",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 85,
+    "name": "mussels",
+    "months": [1,1,1,0,0,0,0,0,0,1,1,1],
+    "seasonal_co2": "339",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 86,
+    "name": "nectarine",
+    "months": [0,0,0,0,1,1,1,1,1,0,0,0],
+    "seasonal_co2": "29",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 87,
+    "name": "new potatoes",
+    "months": [0,0,0,1,1,1,1,0,0,0,0,0],
+    "seasonal_co2": "37",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 88,
+    "name": "onion",
+    "months": [1,1,1,1,1,1,1,1,1,1,1,1],
+    "seasonal_co2": "38",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 89,
+    "name": "orange",
+    "months": [1,1,1,0,0,0,0,0,0,0,0,0],
+    "seasonal_co2": "43",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 90,
+    "name": "oyster",
+    "months": [1,1,1,1,0,0,0,0,1,1,1,1],
+    "seasonal_co2": "339",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 91,
+    "name": "pak choi",
+    "months": [1,1,1,1,1,1,1,1,1,1,1,1],
+    "seasonal_co2": "30",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 92,
+    "name": "parsnip",
+    "months": [1,1,1,0,0,0,0,0,1,1,1,1],
+    "seasonal_co2": "32",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 98,
+    "name": "peach",
+    "months": [0,0,0,0,0,0,0,1,1,0,0,0],
+    "seasonal_co2": "26",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 99,
+    "name": "pear",
+    "months": [1,0,0,0,0,0,0,0,1,1,1,1],
+    "seasonal_co2": "36",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 100,
+    "name": "peas",
+    "months": [0,0,0,0,1,1,1,1,1,1,1,0],
+    "seasonal_co2": "55",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 101,
+    "name": "pepper",
+    "months": [0,0,1,1,1,1,1,1,1,1,0,0],
+    "seasonal_co2": "144",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 102,
+    "name": "plum",
+    "months": [0,0,0,0,0,0,0,0,1,1,0,0],
+    "seasonal_co2": "32",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 103,
+    "name": "pomegranate",
+    "months": [1,1,1,1,1,1,1,1,1,1,1,1],
+    "seasonal_co2": "72",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 104,
+    "name": "pork",
+    "months": [1,1,1,1,1,1,1,1,1,1,1,1],
+    "seasonal_co2": "1141",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 105,
+    "name": "potato",
+    "months": [0,0,0,1,1,1,1,0,0,0,0,0],
+    "seasonal_co2": "14",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 106,
+    "name": "pumpkin",
+    "months": [0,0,0,0,0,0,0,0,0,1,1,1],
+    "seasonal_co2": "9",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 107,
+    "name": "purple sprouting broccoli",
+    "months": [0,1,1,1,0,0,0,0,0,0,0,0],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 108,
+    "name": "quince",
+    "months": [0,0,0,0,0,0,0,0,0,1,1,1],
+    "seasonal_co2": "29",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 109,
+    "name": "radicchio",
+    "months": [1,1,1,1,1,1,1,1,1,1,1,1],
+    "seasonal_co2": "27",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 110,
+    "name": "radish",
+    "months": [0,0,0,0,1,1,1,1,1,1,0,0],
+    "seasonal_co2": "124",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 111,
+    "name": "raspberry",
+    "months": [0,0,0,0,0,0,1,1,1,0,0,0],
+    "seasonal_co2": "42",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 112,
+    "name": "redcurrant",
+    "months": [0,0,0,0,0,0,1,1,1,0,0,0],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 113,
+    "name": "rhubarb",
+    "months": [1,1,1,1,1,1,0,0,0,0,0,0],
+    "seasonal_co2": "36",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 114,
+    "name": "runner bean",
+    "months": [0,0,0,0,0,1,1,1,1,1,1,0],
+    "seasonal_co2": "103",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 115,
+    "name": "salmon",
+    "months": [0,0,1,1,1,1,1,1,1,0,0,0],
+    "seasonal_co2": "714",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 116,
+    "name": "salsify",
+    "months": [1,0,0,0,0,0,0,0,0,1,1,1],
+    "seasonal_co2": "32",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 117,
+    "name": "samphire",
+    "months": [0,0,0,0,0,0,1,1,0,0,0,0],
+    "seasonal_co2": "27",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 118,
+    "name": "sorrel",
+    "months": [0,0,0,1,1,1,1,1,1,0,0,0],
+    "seasonal_co2": "18",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 119,
+    "name": "spinach",
+    "months": [0,0,0,1,1,1,1,1,1,0,0,0],
+    "seasonal_co2": "165",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 120,
+    "name": "spring greens",
+    "months": [0,0,0,1,1,1,0,0,0,0,0,0],
+    "seasonal_co2": "37",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 128,
+    "name": "spring lamb",
+    "months": [0,1,1,1,1,1,0,0,0,0,0,0],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 129,
+    "name": "spring onion",
+    "months": [1,1,1,1,1,1,1,1,1,1,1,1],
+    "seasonal_co2": "37",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 130,
+    "name": "strawberry",
+    "months": [0,0,0,0,0,1,1,1,1,0,0,0],
+    "seasonal_co2": "26",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 131,
+    "name": "swede",
+    "months": [1,1,0,0,0,0,0,0,0,0,1,1],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 132,
+    "name": "sweet potato",
+    "months": [1,1,1,0,0,0,0,0,0,1,1,1],
+    "seasonal_co2": "14",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 133,
+    "name": "sweetcorn ",
+    "months": [0,0,0,0,0,0,0,0,1,0,0,0],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 134,
+    "name": "swiss chard",
+    "months": [0,0,0,0,0,0,1,1,1,1,1,0],
+    "seasonal_co2": "36",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 135,
+    "name": "tayberry",
+    "months": [0,0,0,0,0,0,1,1,0,0,0,0],
+    "seasonal_co2": null,
+    "unseasonal_co2": null
+  },
+  {
+    "id": 136,
+    "name": "tomato",
+    "months": [0,0,0,0,0,1,1,1,1,1,0,0],
+    "seasonal_co2": "166",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 137,
+    "name": "tuna",
+    "months": [0,0,0,0,1,1,1,1,1,0,0,0],
+    "seasonal_co2": "414",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 138,
+    "name": "turkey",
+    "months": [0,0,0,0,0,0,0,0,0,0,0,1],
+    "seasonal_co2": "451",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 139,
+    "name": "turnip",
+    "months": [1,1,0,0,0,0,0,0,0,1,1,1],
+    "seasonal_co2": "32",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 140,
+    "name": "venison",
+    "months": [1,1,0,0,0,0,0,0,0,0,1,1],
+    "seasonal_co2": "1095",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 141,
+    "name": "watercress",
+    "months": [0,0,0,1,1,1,1,1,1,0,0,0],
+    "seasonal_co2": "60",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 142,
+    "name": "watermelon",
+    "months": [0,0,0,0,0,0,1,1,0,0,0,0],
+    "seasonal_co2": "32",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 143,
+    "name": "white asparagus",
+    "months": [0,0,0,1,1,0,0,0,0,0,0,0],
+    "seasonal_co2": "93",
+    "unseasonal_co2": null
+  },
+  {
+    "id": 144,
+    "name": "whiting",
+    "months": [1,1,0,0,0,1,1,1,1,1,1,1],
+    "seasonal_co2": "389",
+    "unseasonal_co2": null
+  }
+]

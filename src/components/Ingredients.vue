@@ -1,13 +1,19 @@
 <template>
+<div>
 	<div id="ingredients">
 		<!--	<input type="text" v-model="filterIngredients" placeholder="search ingredients" /> -->
+		<button	v-for='(month, index) in filterMonth' :key="index" @click='filter=food' :class='{ active: food == filter }'>
+		{{ month }} </button>
 		<ul>
-			<router-link v-for="(food, key, index) in foods" :key="index" v-bind:to="'/recipes/' + food.name">
+			<router-link v-for="(food) in filteredJanuary" :key="food.name" v-bind:to="'/recipes/' + food.name">
 				<li>
-					<h2>{{ food.name }}</h2>
+					
+					<h2> {{ food.name }} </h2>
+					<!-- <h2>{{ filteredProduce }}</h2> -->
 				</li>
 			</router-link>
 		</ul>
+	</div>
 	</div>
 </template>
 <script>
@@ -15,38 +21,17 @@ import { db } from '.././config/db';
 export default {
 	data() {
 		return {
-			filterIngredients: '',
+			fkey: 'mainMonth',
+			filterMonth: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+			filter: 'All',
 			foods: [],
-			ingredients: [
-				{
-					name: 'Apple',
-					season: 'Jan, Feb,... Sep, Oct, Nov, Dec',
-					show: false,
-				},
-				{ name: 'Asparagus', season: 'May, Jun, Jul, Aug, Sep', show: false },
-				{
-					name: 'Beef',
-					season: 'Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec',
-					show: false,
-				},
-				{
-					name: 'Beetroot',
-					season: 'Jan, ... Jul, Aug, Sep, Oct, Nov, Dec',
-					show: false,
-				},
-				{
-					name: 'Onion',
-					season: 'Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec',
-					show: false,
-				},
-				{
-					name: 'Mussels',
-					season: 'Jan, Feb, Mar, Oct, Nov, Dec',
-					show: false,
-				},
-				{ name: 'Watercress', season: 'May, Jun, Jul, Aug, Sep', show: false },
-			],
 		};
+	},
+	computed: {
+		filteredJanuary: function() {
+			return this.foods.filter(food =>
+				(food.months[0] === 1))
+		}
 	},
 	// computed: {
 	// 	filteredIngredients: function() {
