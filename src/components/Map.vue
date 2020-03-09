@@ -1,65 +1,17 @@
 <template>
-	<div>
-		<div>
-			<h2>Search and add a pin</h2>
-			<label>
-				<gmap-autocomplete @place_changed="setPlace"> </gmap-autocomplete>
-				<button @click="addMarker">Add</button>
-			</label>
-			<br />
-		</div>
-		<br />
-		<gmap-map :center="center" :zoom="15" style="width:80%;  height: 600px;">
-			<gmap-marker
-				:key="index"
-				v-for="(m, index) in markers"
-				:position="m.position"
-				@click="center = m.position"
-			></gmap-marker>
-		</gmap-map>
-	</div>
+<div>
+<iframe
+  width="1200"
+  height="600"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/search?key=AIzaSyAZOzuHLWb7E1oJWfjObCpt1UvL-iHFa4o&q=farmers+markets+near+me" allowfullscreen>
+</iframe>
+</div>
 </template>
 <script>
-export default {
-	name: 'Map',
-	data() {
-		return {
-			center: { lat: 51.500632, lng: -0.1272445 },
-			markers: [],
-			places: [],
-			currentPlace: null,
-		};
-	},
-	mounted() {
-		this.geolocate();
-	},
-	methods: {
-		// receives a place object via the autocomplete component
-		setPlace(place) {
-			this.currentPlace = place;
-		},
-		addMarker() {
-			if (this.currentPlace) {
-				const marker = {
-					lat: this.currentPlace.geometry.location.lat(),
-					lng: this.currentPlace.geometry.location.lng(),
-				};
-				this.markers.push({ position: marker });
-				this.places.push(this.currentPlace);
-				this.center = marker;
-				this.currentPlace = null;
-			}
-		},
-		geolocate: function() {
-			navigator.geolocation.getCurrentPosition(position => {
-				this.center = {
-					lat: position.coords.latitude,
-					lng: position.coords.longitude,
-				};
-			});
-		},
-	},
-};
+
+
+
 </script>
 <style scoped>
 #map {

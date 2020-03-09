@@ -11,7 +11,7 @@
 				<p class="weight">Weight: {{ Math.round(ingredient.weight) }} g</p>
 			</li>
 		</ul>
-		{{ storeState.recipe }}
+
 	</div>
 </template>
 <script>

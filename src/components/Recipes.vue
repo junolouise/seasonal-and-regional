@@ -14,7 +14,6 @@
 			</li>
 		</ul>
 
-		{{ recipes }}
 	</div>
 </template>
 <script>
