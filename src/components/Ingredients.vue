@@ -1,4 +1,5 @@
 <template>
+<div>
 	<div id="ingredients">
 		<!--	<input type="text" v-model="filterIngredients" placeholder="search ingredients" /> -->
 		<ul>
@@ -9,13 +10,18 @@
 			</router-link>
 		</ul>
 	</div>
+	<button	v-for='(month, index) in filterMonth' :key="index" @click='filter=food' :class='{ active: food == filter }'>
+	{{ month }} </button>
+	</div>
 </template>
 <script>
 import { db } from '.././config/db';
 export default {
 	data() {
 		return {
-			filterIngredients: '',
+			fkey: 'mainMonth',
+			filterMonth: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+			filter: 'All',
 			foods: [],
 		};
 	},
