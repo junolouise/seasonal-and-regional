@@ -17,35 +17,6 @@ export default {
 		return {
 			filterIngredients: '',
 			foods: [],
-			ingredients: [
-				{
-					name: 'Apple',
-					season: 'Jan, Feb,... Sep, Oct, Nov, Dec',
-					show: false,
-				},
-				{ name: 'Asparagus', season: 'May, Jun, Jul, Aug, Sep', show: false },
-				{
-					name: 'Beef',
-					season: 'Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec',
-					show: false,
-				},
-				{
-					name: 'Beetroot',
-					season: 'Jan, ... Jul, Aug, Sep, Oct, Nov, Dec',
-					show: false,
-				},
-				{
-					name: 'Onion',
-					season: 'Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec',
-					show: false,
-				},
-				{
-					name: 'Mussels',
-					season: 'Jan, Feb, Mar, Oct, Nov, Dec',
-					show: false,
-				},
-				{ name: 'Watercress', season: 'May, Jun, Jul, Aug, Sep', show: false },
-			],
 		};
 	},
 	// computed: {
