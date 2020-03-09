@@ -48,6 +48,8 @@ export default {
 	// },
 	created() {
 		db.ref('foods').once('value', storedValue => (this.foods = storedValue.val()));
+		var date = new Date();
+		this.toggledMonth = date.getMonth();
 	},
 };
 </script>
