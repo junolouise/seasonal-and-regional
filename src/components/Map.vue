@@ -1,18 +1,63 @@
 <template>
-	<div id="map">
-		<div class="gmap" ref="map"></div>
+	<div>
+		<div>
+			<h2>Search and add a pin</h2>
+			<label>
+				<gmap-autocomplete @place_changed="setPlace"> </gmap-autocomplete>
+				<button @click="addMarker">Add</button>
+			</label>
+			<br />
+		</div>
+		<br />
+		<gmap-map :center="center" :zoom="15" style="width:80%;  height: 600px;">
+			<gmap-marker
+				:key="index"
+				v-for="(m, index) in markers"
+				:position="m.position"
+				@click="center = m.position"
+			></gmap-marker>
+		</gmap-map>
 	</div>
 </template>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZOzuHLWb7E1oJWfjObCpt1UvL-iHFa4o"></script>
 <script>
 export default {
+	name: 'Map',
 	data() {
-		map: null;
+		return {
+			center: { lat: 51.500632, lng: -0.1272445 },
+			markers: [],
+			places: [],
+			currentPlace: null,
+		};
 	},
 	mounted() {
-		this.map = new window.google.maps.Map(this.$refs['map'], {
-			zoom: 4,
-		});
+		this.geolocate();
+	},
+	methods: {
+		// receives a place object via the autocomplete component
+		setPlace(place) {
+			this.currentPlace = place;
+		},
+		addMarker() {
+			if (this.currentPlace) {
+				const marker = {
+					lat: this.currentPlace.geometry.location.lat(),
+					lng: this.currentPlace.geometry.location.lng(),
+				};
+				this.markers.push({ position: marker });
+				this.places.push(this.currentPlace);
+				this.center = marker;
+				this.currentPlace = null;
+			}
+		},
+		geolocate: function() {
+			navigator.geolocation.getCurrentPosition(position => {
+				this.center = {
+					lat: position.coords.latitude,
+					lng: position.coords.longitude,
+				};
+			});
+		},
 	},
 };
 </script>

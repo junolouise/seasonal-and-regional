@@ -8,7 +8,7 @@
 		<ul>
 			<li v-for="(ingredient, index) in storeState.recipe.ingredients" :key="index">
 				<p>{{ ingredient.text }}</p>
-				<p>Weight: {{ Math.round(ingredient.weight) }} g</p>
+				<p class="weight">Weight: {{ Math.round(ingredient.weight) }} g</p>
 			</li>
 		</ul>
 		{{ storeState.recipe }}
@@ -75,5 +75,8 @@ li {
 	background-position: center;
 	float: left;
 	display: block;
+}
+.weight {
+	float: right;
 }
 </style>
