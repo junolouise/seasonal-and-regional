@@ -1,31 +1,18 @@
 <template>
 	<div id="map">
-		<div class="gmap"></div>
+		<div class="gmap" ref="map"></div>
 	</div>
 </template>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZOzuHLWb7E1oJWfjObCpt1UvL-iHFa4o"></script>
 <script>
-import gmapsInit from '../gmaps';
 export default {
 	data() {
-		return {};
+		map: null;
 	},
-	async mounted() {
-		try {
-			const google = await gmapsInit();
-			const geocoder = new google.maps.Geocoder();
-			const map = new google.maps.Map(this.$el);
-
-			geocoder.geocode({ address: 'Austria' }, (results, status) => {
-				if (status !== 'OK' || !results[0]) {
-					throw new Error(status);
-				}
-
-				map.setCenter(results[0].geometry.location);
-				map.fitBounds(results[0].geometry.viewport);
-			});
-		} catch (error) {
-			console.error(error);
-		}
+	mounted() {
+		this.map = new window.google.maps.Map(this.$refs['map'], {
+			zoom: 4,
+		});
 	},
 };
 </script>
