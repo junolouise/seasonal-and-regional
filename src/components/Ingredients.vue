@@ -1,28 +1,46 @@
 <template>
-<div>
-	<div id="ingredients">
-		<!--	<input type="text" v-model="filterIngredients" placeholder="search ingredients" /> -->
-		<button	v-for='(month, index) in filterMonth' :key="index" @click='clickOnMonth(index)' :id="index" :class="{switchedOn: toggledMonth == index}">
-		{{ month }} </button>
-		<ul>
-			<router-link v-for="(food) in selectedMonth" :key="food.name" v-bind:to="'/recipes/' + food.name">
-				<li>
-					
-					<h2> {{ food.name }} </h2>
-					<!-- <h2>{{ filteredProduce }}</h2> -->
-				</li>
-			</router-link>
-		</ul>
-	</div>
+
+	<div>
+		<div id="ingredients">
+			<!--	<input type="text" v-model="filterIngredients" placeholder="search ingredients" /> -->
+      <button	v-for='(month, index) in filterMonth' :key="index" @click='clickOnMonth(index)' :id="index" :class="{switchedOn: toggledMonth == index}">
+				{{ month }}
+			</button>
+			<ul>
+				<div v-for="food in selectedMonth" :key="food.name" @click="selectedIngredient(food)">
+					<router-link v-bind:to="'/recipes/' + food.name">
+						<li>
+							<h2>{{ food.name }}</h2>
+							<!-- <h2>{{ filteredProduce }}</h2> -->
+						</li>
+					</router-link>
+				</div>
+			</ul>
+		</div>
 	</div>
 </template>
 <script>
 import { db } from '.././config/db';
+// used to store ingredients DB content for use in calculation in Recipe Detail Screen
+import { store } from '../store.js';
 export default {
 	data() {
 		return {
 			fkey: 'mainMonth',
-			filterMonth: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+			filterMonth: [
+				'January',
+				'February',
+				'March',
+				'April',
+				'May',
+				'June',
+				'July',
+				'August',
+				'September',
+				'October',
+				'November',
+				'December',
+			],
 			filter: 'All',
 			foods: [],
 			toggledMonth: 0,
@@ -33,11 +51,17 @@ export default {
 			this.toggledMonth = number
 		}
 	},
-	computed: {
-		selectedMonth: function() {
+	
+	methods: {
+  selectedMonth: function() {
 			return this.foods.filter(food =>
 				(food.months[this.toggledMonth] === 1))
-		}
+		},
+		selectedIngredient: function(food) {
+			store.storeSelectedIngredient(food);
+			console.log(store.state.selectedIngredient);
+		},
+
 	},
 	// computed: {
 	// 	filteredIngredients: function() {
@@ -48,8 +72,12 @@ export default {
 	// },
 	created() {
 		db.ref('foods').once('value', storedValue => (this.foods = storedValue.val()));
+
+		store.storeIngredients(this.foods);
+
 		var date = new Date();
 		this.toggledMonth = date.getMonth();
+
 	},
 };
 </script>
@@ -81,3 +109,4 @@ li {
 	background-color: green;
 }
 </style>
+
