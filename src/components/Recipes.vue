@@ -2,16 +2,13 @@
 	<div id="recipes">
 		<!-- <input type="text" v-model="filterrecipes" placeholder="search recipes" /> -->
 		<ul>
-			<li
-				v-for="(recipe, index) in recipes"
-				:key="index"
-				:style="{ backgroundImage: `url(${recipe.recipe.image})` }"
-				@click="storeRecipe(recipe.recipe)"
-			>
-				<router-link to="/recipeDetail" exact
-					><h2>{{ recipe.recipe.label }}</h2></router-link
-				>
-			</li>
+			<div v-for="(recipe, index) in recipes" :key="index" @click="storeRecipe(recipe.recipe)">
+				<router-link to="/recipeDetail" exact>
+					<li :style="{ backgroundImage: `url(${recipe.recipe.image})` }">
+						<h2>{{ recipe.recipe.label }}</h2>
+					</li>
+				</router-link>
+			</div>
 		</ul>
 	</div>
 </template>
