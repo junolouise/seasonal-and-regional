@@ -9,18 +9,17 @@ describe('Recipes', function() {
 
 	it('Routes to correct url from selected ingredient', function() {
 		cy.visit('https://seasonal-regional.herokuapp.com/');
-
-		cy.contains('beef').click();
-
-		cy.url().should('include', 'beef');
+        cy.get('button').contains('January').click();
+		cy.get('h2').contains('apple').click();
+		cy.url().should('include', '/apple');
 	});
 
 	it('Displays recipes for the selected ingredient', function() {
 		cy.visit('https://seasonal-regional.herokuapp.com/');
+        cy.contains('January').click();
+		cy.get('h2').contains('apple').click();
 
-		cy.contains('beef').click();
-
-		cy.contains('Beef');
+		cy.contains('Apple');
 	});
 
 	it('Displays  the details of a recipe with weights for the selected recipe', function() {
