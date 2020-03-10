@@ -11,12 +11,18 @@
 			>
 				{{ month }}
 			</button>
+			<button 
+				@click="clickOnMonth(12)"
+				:id="12"
+				:class="{ switchedOn: toggledMonth == 12 }"
+			>
+				Show all
+				</button>
 			<ul>
 				<div v-for="food in selectedMonth()" :key="food.name" @click="selectedIngredient(food)">
 					<router-link v-bind:to="'/recipes/' + food.name">
 						<li>
 							<h2>{{ food.name }}</h2>
-							<!-- <h2>{{ filteredProduce }}</h2> -->
 						</li>
 					</router-link>
 				</div>
@@ -56,11 +62,18 @@ export default {
 			this.toggledMonth = number;
 		},
 		selectedMonth: function() {
-			return this.foods.filter(food => food.months[this.toggledMonth] === 1);
+			if (this.toggledMonth == 12) {
+				return this.foods
+			} else {
+				return this.foods.filter(food => food.months[this.toggledMonth] === 1)
+			}
 		},
 		selectedIngredient: function(food) {
 			store.storeSelectedIngredient(food);
 		},
+		showAll: function() {
+			return this.foods
+		}
 	},
 	// computed: {
 	// 	filteredIngredients: function() {
