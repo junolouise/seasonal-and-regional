@@ -7,16 +7,22 @@
 				:key="index"
 				@click="clickOnMonth(index)"
 				:id="index"
-				:class="{ switchedOn: toggledMonth == index }"
+				:class="{ button: 'button', switchedOn: toggledMonth == index }"
 			>
 				{{ month }}
 			</button>
+			<button 
+				@click="clickOnMonth(12)"
+				:id="12"
+				:class="{ all: 'all', switchedOn: toggledMonth == 12 }"
+			>
+				Show all
+				</button>
 			<ul>
 				<div v-for="food in selectedMonth()" :key="food.name" @click="selectedIngredient(food)">
 					<router-link v-bind:to="'/recipes/' + food.name">
 						<li>
 							<h2>{{ food.name }}</h2>
-							<!-- <h2>{{ filteredProduce }}</h2> -->
 						</li>
 					</router-link>
 				</div>
@@ -56,11 +62,18 @@ export default {
 			this.toggledMonth = number;
 		},
 		selectedMonth: function() {
-			return this.foods.filter(food => food.months[this.toggledMonth] === 1);
+			if (this.toggledMonth == 12) {
+				return this.foods
+			} else {
+				return this.foods.filter(food => food.months[this.toggledMonth] === 1)
+			}
 		},
 		selectedIngredient: function(food) {
 			store.storeSelectedIngredient(food);
 		},
+		showAll: function() {
+			return this.foods
+		}
 	},
 	// computed: {
 	// 	filteredIngredients: function() {
@@ -85,7 +98,6 @@ export default {
 	padding: 0 20px;
 	box-sizing: border-box;
 }
-
 ul {
 	display: flex;
 	flex-wrap: wrap;
@@ -102,6 +114,19 @@ li {
 	max-width: 300px;
 }
 .switchedOn {
+	color: white;
+	z-index: 2;
 	background-color: green;
+	border-bottom-color: null;
+}
+.button {
+	border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+	z-index: 0;
+	border-bottom: 3px solid green;
+}
+.all {
+	position: absolute;
+	right: 70px;
 }
 </style>
