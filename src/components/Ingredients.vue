@@ -1,18 +1,13 @@
 <template>
+
 	<div>
 		<div id="ingredients">
 			<!--	<input type="text" v-model="filterIngredients" placeholder="search ingredients" /> -->
-
-			<button
-				v-for="(month, index) in filterMonth"
-				:key="index"
-				@click="filter = food"
-				:class="{ active: food == filter }"
-			>
+      <button	v-for='(month, index) in filterMonth' :key="index" @click='clickOnMonth(index)' :id="index" :class="{switchedOn: toggledMonth == index}">
 				{{ month }}
 			</button>
 			<ul>
-				<div v-for="food in filteredJanuary" :key="food.name" @click="selectedIngredient(food)">
+				<div v-for="food in selectedMonth" :key="food.name" @click="selectedIngredient(food)">
 					<router-link v-bind:to="'/recipes/' + food.name">
 						<li>
 							<h2>{{ food.name }}</h2>
@@ -48,18 +43,25 @@ export default {
 			],
 			filter: 'All',
 			foods: [],
+			toggledMonth: 0,
 		};
 	},
-	computed: {
-		filteredJanuary: function() {
-			return this.foods.filter(food => food.months[0] === 1);
-		},
-	},
 	methods: {
+        clickOnMonth: function(number) {
+			this.toggledMonth = number
+		}
+	},
+	
+	methods: {
+  selectedMonth: function() {
+			return this.foods.filter(food =>
+				(food.months[this.toggledMonth] === 1))
+		},
 		selectedIngredient: function(food) {
 			store.storeSelectedIngredient(food);
 			console.log(store.state.selectedIngredient);
 		},
+
 	},
 	// computed: {
 	// 	filteredIngredients: function() {
@@ -70,7 +72,12 @@ export default {
 	// },
 	created() {
 		db.ref('foods').once('value', storedValue => (this.foods = storedValue.val()));
+
 		store.storeIngredients(this.foods);
+
+		var date = new Date();
+		this.toggledMonth = date.getMonth();
+
 	},
 };
 </script>
@@ -98,4 +105,8 @@ li {
 	margin: 10px;
 	max-width: 300px;
 }
+.switchedOn {
+	background-color: green;
+}
 </style>
+
