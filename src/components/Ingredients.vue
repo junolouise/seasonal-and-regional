@@ -7,14 +7,14 @@
 				:key="index"
 				@click="clickOnMonth(index)"
 				:id="index"
-				:class="{ switchedOn: toggledMonth == index }"
+				:class="{ button: 'button', switchedOn: toggledMonth == index }"
 			>
 				{{ month }}
 			</button>
 			<button 
 				@click="clickOnMonth(12)"
 				:id="12"
-				:class="{ switchedOn: toggledMonth == 12 }"
+				:class="{ all: 'all', switchedOn: toggledMonth == 12 }"
 			>
 				Show all
 				</button>
@@ -98,7 +98,6 @@ export default {
 	padding: 0 20px;
 	box-sizing: border-box;
 }
-
 ul {
 	display: flex;
 	flex-wrap: wrap;
@@ -115,6 +114,19 @@ li {
 	max-width: 300px;
 }
 .switchedOn {
+	color: white;
+	z-index: 2;
 	background-color: green;
+	border-bottom-color: null;
+}
+.button {
+	border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+	z-index: 0;
+	border-bottom: 3px solid green;
+}
+.all {
+	position: absolute;
+	right: 70px;
 }
 </style>
