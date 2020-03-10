@@ -7,14 +7,13 @@
 		<ul>
 			<router-link v-for="(food) in selectedMonth" :key="food.name" v-bind:to="'/recipes/' + food.name">
 				<li>
-					
 					<h2> {{ food.name }} </h2>
-					<!-- <h2>{{ filteredProduce }}</h2> -->
+					<img v-bind:src="'../assets/images/' + food.name + '.jpeg'"/>
 				</li>
 			</router-link>
 		</ul>
 	</div>
-	</div>
+</div>
 </template>
 <script>
 import { db } from '.././config/db';
@@ -25,6 +24,7 @@ export default {
 			filterMonth: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
 			filter: 'All',
 			foods: [],
+			images: [],
 			toggledMonth: 0,
 		};
 	},
@@ -79,5 +79,6 @@ li {
 }
 .switchedOn {
 	background-color: green;
+	border-radius: 5px;
 }
 </style>
