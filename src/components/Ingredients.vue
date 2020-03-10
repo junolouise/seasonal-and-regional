@@ -98,6 +98,9 @@ export default {
 	padding: 0 20px;
 	box-sizing: border-box;
 }
+a {
+	visibility: visible;
+}
 ul {
 	display: flex;
 	flex-wrap: wrap;
