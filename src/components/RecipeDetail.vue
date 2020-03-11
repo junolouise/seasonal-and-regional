@@ -9,10 +9,10 @@
 			<li v-for="(ingredient, index) in storeState.recipeIngredientsCarbon" :key="index">
 				<p>{{ ingredient.text }}</p>
 				<p class="weight">Weight: {{ Math.round(ingredient.weight) }} g</p>
-				<p>Carbon footprint of local/seasonal {{ingredient.found}} (CO2e/kg): {{ ingredient.seasonalCo2 }}</p>
+				<p>Carbon footprint of local/seasonal {{ingredient.found}} (CO2e/kg): {{ Math.round(ingredient.seasonalCo2) }}</p>
+				<p>Carbon footprint of imported {{ingredient.found}} (CO2e/kg): {{ Math.round(ingredient.unseasonalCo2) }}</p>
 			</li>
 		</ul>
-
 	</div>
 </template>
 <script>

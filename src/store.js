@@ -48,8 +48,10 @@ export const store = {
 			if (found == false) {
 				seasonalCo2 = 0;
 				unseasonalCo2 = 0;
-				foundString = 'N/A';
+				foundString = 'NaN';
 			}
+			seasonalCo2 = (seasonalCo2*this.state.recipe.ingredients[x].weight)/100
+			unseasonalCo2 = (unseasonalCo2*this.state.recipe.ingredients[x].weight)/100
 			this.state.recipeIngredientsCarbon.push({
 				text: recipeIngredient,
 				weight: this.state.recipe.ingredients[x].weight,
