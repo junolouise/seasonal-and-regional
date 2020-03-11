@@ -33,7 +33,7 @@
 				Show all
 			</button>
 			<ul>
-				<div v-for="food in selectedMonth()" :key="food.name" @click="selectedIngredient(food)">
+				<div id="produce" v-for="food in selectedMonth()" :key="food.name" @click="selectedIngredient(food)">
 					<router-link v-bind:to="'/recipes/' + food.name">
 						<li class="box" :style="{ backgroundImage: `url(${food.image})` }">
 							<h2>{{ food.name }}</h2>
@@ -130,15 +130,7 @@ ul {
 	list-style-type: none;
 	padding: 0;
 }
-.box {
-	flex-grow: 1;
-	flex-basis: 300px;
-	text-align: center;
-	padding: 30px;
-	border: 1px solid #222;
-	margin: 10px;
-	max-width: 300px;
-}
+
 .switchedOn {
 	color: white;
 	z-index: 2;
@@ -158,5 +150,20 @@ ul {
 
 ul.text {
 	list-style-type: circle;
+}
+
+.box {
+	border-radius: 25px;
+	flex-grow: 1;
+	flex-basis: 300px;
+	text-align: center;
+	padding: 30px;
+	border: 1px solid #222;
+	margin: 10px;
+	min-width: 100px;
+	max-width: 200px;
+	min-height: 80px;
+	background-repeat: no-repeat;
+	background-size: contain;
 }
 </style>
