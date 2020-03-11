@@ -60,6 +60,10 @@ h2 {
 	border-radius: 10px;
 	background: white;
 }
+a {
+	visibility: visible;
+	text-decoration: none;
+}
 ul {
 	display: flex;
 	flex-wrap: wrap;
@@ -72,7 +76,7 @@ li {
 	flex-basis: 300px;
 	text-align: center;
 	padding: 30px;
-	border: 1px solid #222;
+	border: 2px solid #222;
 	margin: 10px;
 	max-width: 240px;
 	min-height: 240px;
