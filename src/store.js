@@ -48,7 +48,7 @@ export const store = {
 			if (found == false) {
 				seasonalCo2 = 0;
 				unseasonalCo2 = 0;
-				foundString = 'not found';
+				foundString = 'N/A';
 			}
 			this.state.recipeIngredientsCarbon.push({
 				text: recipeIngredient,
