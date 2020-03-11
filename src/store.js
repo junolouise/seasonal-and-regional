@@ -19,7 +19,7 @@ export const store = {
 
 	calculateCarbonEmissions() {
 		// loops around each ingredient within a recipe
-		console.log(this.state.ingredients);
+		this.state.recipeIngredientsCarbon.length = 0
 		for (var x = 0; x < this.state.recipe.ingredients.length; x++) {
 			var recipeIngredient = this.state.recipe.ingredients[x].text;
 			var found = false;
@@ -52,6 +52,8 @@ export const store = {
 			}
 			seasonalCo2 = (seasonalCo2*this.state.recipe.ingredients[x].weight)/100
 			unseasonalCo2 = (unseasonalCo2*this.state.recipe.ingredients[x].weight)/100
+			this.state.totalSeasonalCo2 += seasonalCo2
+			this.state.totalUneasonalCo2 += unseasonalCo2
 			this.state.recipeIngredientsCarbon.push({
 				text: recipeIngredient,
 				weight: this.state.recipe.ingredients[x].weight,
