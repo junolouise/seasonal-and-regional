@@ -93,8 +93,12 @@ export default {
 	// 	},
 	// },
 	created() {
-		db.ref('foods').once('value', storedValue => (this.foods = storedValue.val()));
-		store.storeIngredients(this.foods);
+		//db.ref('foods').once('value', storedValue => (this.foods = storedValue.val()));
+		db.ref('foods')
+			.once('value', storedValue => (this.foods = storedValue.val()))
+			.then(function(storedValue) {
+				store.storeIngredients(storedValue.val());
+			});
 		var date = new Date();
 		this.toggledMonth = date.getMonth();
 	},
