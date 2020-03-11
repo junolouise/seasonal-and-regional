@@ -13,8 +13,8 @@
 				<p>Carbon footprint of imported {{ingredient.found}} (CO2e): {{ Math.round(ingredient.unseasonalCo2) }}</p>
 			</li>
 			<br><br>
-			<li> Total carbon footprint of local/seasonal produce (CO2e): {{ Math.round(storeState.totalSeasonalCo2) }} </li>
-			<li> Total carbon footprint of imported produce (CO2e): {{ Math.round(storeState.totalUnseasonalCo2) }} </li>
+			<li :style="{ color: carbonTrafficLight }"> Total carbon footprint of local/seasonal produce (CO2e): {{ Math.round(storeState.totalSeasonalCo2) }} </li>
+			<li :style="{ color: carbonTrafficLight }"> Total carbon footprint of imported produce (CO2e): {{ Math.round(storeState.totalUnseasonalCo2) }} </li>
 			<li> Total weight of recipe (g): {{(Math.round(storeState.recipe.totalWeight))}}</li>
 		</ul>
 	</div>
@@ -26,6 +26,21 @@ export default {
 		return {
 			storeState: store.state,
 		};
+	},
+	computed: {
+		carbonTrafficLight() {
+			
+			if (this.storeState.totalSeasonalCo2 > 2000) {
+				return "red"
+			} else if(this.storeState.totalSeasonalCo2 > 1000) {
+				return "amber"
+
+			}
+			else {return "green"}
+			
+		}
+	
+		
 	},
 	methods: {
 		sourceRecipe: function(url) {
