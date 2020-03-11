@@ -25,6 +25,7 @@ export default {
 	methods: {
 		storeRecipe(recipe) {
 			store.addRecipe(recipe);
+			store.calculateCarbonEmissions();
 		},
 	},
 
