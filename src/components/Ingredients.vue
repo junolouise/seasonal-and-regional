@@ -164,6 +164,6 @@ ul.text {
 	max-width: 200px;
 	min-height: 80px;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-size: cover;
 }
 </style>
