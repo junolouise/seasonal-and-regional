@@ -9,13 +9,23 @@
 			<li v-for="(ingredient, index) in storeState.recipeIngredientsCarbon" :key="index">
 				<p>{{ ingredient.text }}</p>
 				<p class="weight">Weight: {{ Math.round(ingredient.weight) }} g</p>
-				<p>Carbon footprint of local/seasonal {{ingredient.found}} (CO2e): {{ Math.round(ingredient.seasonalCo2) }}</p>
-				<p>Carbon footprint of imported {{ingredient.found}} (CO2e): {{ Math.round(ingredient.unseasonalCo2) }}</p>
+				<p>
+					Carbon footprint of local/seasonal {{ ingredient.found }} (CO2e):
+					{{ Math.round(ingredient.seasonalCo2) }}
+				</p>
+				<p>
+					Carbon footprint of imported {{ ingredient.found }} (CO2e):
+					{{ Math.round(ingredient.unseasonalCo2) }}
+				</p>
 			</li>
-			<br><br>
-			<li :style="{ color: carbonTrafficLight }"> Total carbon footprint of local/seasonal produce (CO2e): {{ Math.round(storeState.totalSeasonalCo2) }} </li>
-			<li :style="{ color: carbonTrafficLight }"> Total carbon footprint of imported produce (CO2e): {{ Math.round(storeState.totalUnseasonalCo2) }} </li>
-			<li> Total weight of recipe (g): {{(Math.round(storeState.recipe.totalWeight))}}</li>
+			<br /><br />
+			<li :style="{ color: carbonTrafficLight }">
+				Total carbon footprint of local/seasonal produce (CO2e): {{ Math.round(storeState.totalSeasonalCo2) }}
+			</li>
+			<li :style="{ color: carbonTrafficLight }">
+				Total carbon footprint of imported produce (CO2e): {{ Math.round(storeState.totalUnseasonalCo2) }}
+			</li>
+			<li>Total weight of recipe (g): {{ Math.round(storeState.recipe.totalWeight) }}</li>
 		</ul>
 	</div>
 </template>
@@ -29,18 +39,14 @@ export default {
 	},
 	computed: {
 		carbonTrafficLight() {
-			
 			if (this.storeState.totalSeasonalCo2 > 2000) {
-				return "red"
-			} else if(this.storeState.totalSeasonalCo2 > 1000) {
-				return "amber"
-
+				return 'red';
+			} else if (this.storeState.totalSeasonalCo2 > 1000) {
+				return 'orange';
+			} else {
+				return 'green';
 			}
-			else {return "green"}
-			
-		}
-	
-		
+		},
 	},
 	methods: {
 		sourceRecipe: function(url) {
