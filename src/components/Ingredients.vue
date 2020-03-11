@@ -1,14 +1,22 @@
 <template>
 	<div>
 		<div id="ingredients">
-		<p>
-			Displaying below are local ingredients, relative to to UK, that are currently in season. Select a different month to see future seasonality. Why eat locally sourced foods?</p>
+			<p>
+				Displaying below are local ingredients, relative to to UK, that are currently in season. Select a
+				different month to see future seasonality. Why eat locally sourced foods?
+			</p>
 			<ul class="text">
-			<li>Locally sourced foods will naturally be in season </li>
-			<li>Foods are full of flavour as they are picked at their peak of ripeness versus being harvested early to be shipped</li>
-			<li>Foods contain more nutrients as the older foods are, the more the nutrients deplete</li>
-			<li>Money spent with local farmers stays close to home and is reinvested into your local economy</li>
-			<li>Foods avoid a hefty carbon footprint of being imported from abroad which can add 20% onto the carbon footprint</li>
+				<li>Locally sourced foods will naturally be in season</li>
+				<li>
+					Foods are full of flavour as they are picked at their peak of ripeness versus being harvested early
+					to be shipped
+				</li>
+				<li>Foods contain more nutrients as the older foods are, the more the nutrients deplete</li>
+				<li>Money spent with local farmers stays close to home and is reinvested into your local economy</li>
+				<li>
+					Foods avoid a hefty carbon footprint of being imported from abroad which can add 20% onto the carbon
+					footprint
+				</li>
 			</ul>
 
 			<!--	<input type="text" v-model="filterIngredients" placeholder="search ingredients" /> -->
@@ -21,17 +29,13 @@
 			>
 				{{ month }}
 			</button>
-			<button 
-				@click="clickOnMonth(12)"
-				:id="12"
-				:class="{ all: 'all', switchedOn: toggledMonth == 12 }"
-			>
+			<button @click="clickOnMonth(12)" :id="12" :class="{ all: 'all', switchedOn: toggledMonth == 12 }">
 				Show all
-				</button>
+			</button>
 			<ul>
 				<div v-for="food in selectedMonth()" :key="food.name" @click="selectedIngredient(food)">
 					<router-link v-bind:to="'/recipes/' + food.name">
-						<li class='box'>
+						<li class="box" :style="{ backgroundImage: `url(${food.image})` }">
 							<h2>{{ food.name }}</h2>
 						</li>
 					</router-link>
@@ -73,17 +77,22 @@ export default {
 		},
 		selectedMonth: function() {
 			if (this.toggledMonth == 12) {
-				return this.foods
+				return this.foods;
 			} else {
-				return this.foods.filter(food => food.months[this.toggledMonth] === 1)
+				return this.foods.filter(food => food.months[this.toggledMonth] === 1);
 			}
 		},
+
 		selectedIngredient: function(food) {
 			store.storeSelectedIngredient(food);
 		},
 		showAll: function() {
-			return this.foods
-		}
+			return this.foods;
+		},
+		computedStr: function(image) {
+			var str = 'background-image: url("' + image + '")';
+			return str;
+		},
 	},
 	// computed: {
 	// 	filteredIngredients: function() {
@@ -138,7 +147,7 @@ ul {
 }
 .button {
 	border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+	border-top-right-radius: 6px;
 	z-index: 0;
 	border-bottom: 3px solid green;
 }
