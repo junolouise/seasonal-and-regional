@@ -1,6 +1,16 @@
 <template>
 	<div>
 		<div id="ingredients">
+		<p>
+			Displaying below are local ingredients, relative to to UK, that are currently in season. Select a different month to see future seasonality. Why eat locally sourced foods?</p>
+			<ul class="text">
+			<li>Locally sourced foods will naturally be in season </li>
+			<li>Foods are full of flavour as they are picked at their peak of ripeness versus being harvested early to be shipped</li>
+			<li>Foods contain more nutrients as the older foods are, the more the nutrients deplete</li>
+			<li>Money spent with local farmers stays close to home and is reinvested into your local economy</li>
+			<li>Foods avoid a hefty carbon footprint of being imported from abroad which can add 20% onto the carbon footprint</li>
+			</ul>
+
 			<!--	<input type="text" v-model="filterIngredients" placeholder="search ingredients" /> -->
 			<button
 				v-for="(month, index) in filterMonth"
@@ -21,7 +31,7 @@
 			<ul>
 				<div v-for="food in selectedMonth()" :key="food.name" @click="selectedIngredient(food)">
 					<router-link v-bind:to="'/recipes/' + food.name">
-						<li>
+						<li class='box'>
 							<h2>{{ food.name }}</h2>
 						</li>
 					</router-link>
@@ -107,7 +117,7 @@ ul {
 	list-style-type: none;
 	padding: 0;
 }
-li {
+.box {
 	flex-grow: 1;
 	flex-basis: 300px;
 	text-align: center;
@@ -131,5 +141,9 @@ li {
 .all {
 	position: absolute;
 	right: 70px;
+}
+
+ul.text {
+	list-style-type: circle;
 }
 </style>
