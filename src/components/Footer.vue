@@ -16,11 +16,11 @@ export default {
 </script>
 <style scoped>
 footer {
-  background: #222;
+  background: #3f8724;
   padding: 6px;
 }
 p {
-  color: lightseagreen;
+  color: white;
   text-align: center;
 }
 </style>
