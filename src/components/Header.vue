@@ -1,9 +1,9 @@
 <template>
 	<header>
-		<h1>{{ title }}</h1>
-		<li><router-link to="/" exact>Ingredients</router-link></li>
-		<li><router-link to="/recipes">Recipes</router-link></li>
+		<img width="8%" src="../assets/logo.png" />
 		<li><router-link to="/map">Map Farmers Markets</router-link></li>
+		<li><router-link to="/recipes">Recipes</router-link></li>
+		<li><router-link to="/" exact>Ingredients</router-link></li>
 	</header>
 </template>
 
@@ -19,13 +19,14 @@ export default {
 
 <style scoped>
 header {
-	background: lightseagreen;
+	background: rgb(7, 80, 23);
 	margin-bottom: 40px;
-	padding: 10px;
+	padding: 5px;
 }
 h1 {
 	color: #222;
 	text-align: center;
+	display: inline-block;
 }
 ul {
 	list-style-type: none;
@@ -34,7 +35,9 @@ ul {
 }
 li {
 	display: inline-block;
-	margin: 0 10px;
+	margin: 60px 10px;
+	vertical-align: bottom;
+	float: right;
 }
 a {
 	color: #fff;
