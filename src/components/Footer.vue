@@ -8,8 +8,8 @@
 export default {
   data() {
     return {
-      copyright: "Copyright 2020 Hangry",
-      credits: "Data retrieved from Eaternity API"
+      copyright: "Copyright 2020 Team Hangry",
+      credits: "Data retrieved from Edamam API"
     };
   }
 };
