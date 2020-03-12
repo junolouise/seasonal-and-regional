@@ -1,7 +1,7 @@
 <template>
 	<div id="recipeDetail">
 		<div id="title">
-		<h3>Recipe: {{ storeState.recipe.label }}Source: {{ storeState.recipe.source }}</h3>
+		<h3>Recipe: {{ storeState.recipe.label }}<br>Source: {{ storeState.recipe.source }}</h3>
 		</div>
 		<div class="image" :style="{ backgroundImage: `url(${storeState.recipe.image})` }">{{ storeState.image }}</div>
 		
