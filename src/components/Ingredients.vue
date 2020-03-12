@@ -10,7 +10,7 @@
 				<li>
 					Foods are full of flavour as they are picked at their peak of ripeness versus being harvested early
 					to be shipped 
-		  	</li>
+				</li>
 				<li>Foods contain more nutrients as the older foods are, the more the nutrients deplete </li>
 				<li>Money spent with local farmers stays close to home and is reinvested into your local economy</li>
 				<li>
