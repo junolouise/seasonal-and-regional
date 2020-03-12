@@ -6,16 +6,28 @@
 
 		<div class="image" :style="{ backgroundImage: `url(${storeState.recipe.image})` }">{{ storeState.image }}</div>
 		<ul>
+			<table>
 			<li v-for="(ingredient, index) in storeState.recipeIngredientsCarbon" :key="index">
-				<p>{{ ingredient.text }}</p>
-				<p class="weight">Weight: {{ Math.round(ingredient.weight) }} g</p>
-				<p>Carbon footprint of local/seasonal {{ingredient.found}} (CO2e): {{ Math.round(ingredient.seasonalCo2) }}</p>
-				<p>Carbon footprint of imported {{ingredient.found}} (CO2e): {{ Math.round(ingredient.unseasonalCo2) }}</p>
+			<tr>	
+				<td><p>{{ ingredient.text }}</p></td>
+			</tr>
+				<tr>
+					<td class="weight">Weight: </td> <td>{{ Math.round(ingredient.weight) }} </td>
+				</tr>
+				<tr>
+					<td>Carbon footprint of local/seasonal {{ingredient.found}} (CO2e): </td><td>{{ Math.round(ingredient.seasonalCo2) }}</td>
+				</tr>
+				<tr>
+					<td>Carbon footprint of imported {{ingredient.found}} (CO2e): </td><td>{{ Math.round(ingredient.unseasonalCo2) }}</td>
+				</tr>
 			</li>
 			<br><br>
-			<li :style="{ color: carbonTrafficLight }"> Total carbon footprint of local/seasonal produce (CO2e): {{ Math.round(storeState.totalSeasonalCo2) }} </li>
-			<li :style="{ color: carbonTrafficLight }"> Total carbon footprint of imported produce (CO2e): {{ Math.round(storeState.totalUnseasonalCo2) }} </li>
-			<li> Total weight of recipe (g): {{(Math.round(storeState.recipe.totalWeight))}}</li>
+			<tr>
+				<td :style="{ color: carbonTrafficLight }"> Total carbon footprint of local/seasonal produce (CO2e): {{ Math.round(storeState.totalSeasonalCo2) }} </td>
+				<td :style="{ color: carbonTrafficLight }"> Total carbon footprint of imported produce (CO2e): {{ Math.round(storeState.totalUnseasonalCo2) }} </td>
+				</tr><tr><td> Total weight of recipe (g): {{(Math.round(storeState.recipe.totalWeight))}}</td>
+			</tr>
+			</table>
 		</ul>
 	</div>
 </template>
@@ -96,7 +108,19 @@ li {
 	float: left;
 	display: block;
 }
-.weight {
+/* .weight {
 	float: right;
+} */
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+/* th, td {
+	border: 1px solid black;
+} */
+
+tr:nth-child(even) {
+	background-color: #e0fff2;
 }
 </style>
