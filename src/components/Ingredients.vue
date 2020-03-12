@@ -140,7 +140,8 @@ export default {
 	padding: 0 20px;
 	box-sizing: border-box;
 }
-h2 {
+h2,
+h3 {
 	border-radius: 10px;
 	background: white;
 }
@@ -182,13 +183,13 @@ ul.text {
 	flex-basis: 300px;
 	text-align: center;
 	padding: 30px;
-	border: 2px solid #222;
+	border: 5px solid #222;
 	margin: 10px;
 	min-width: 100px;
 	max-width: 200px;
 	min-height: 80px;
 	max-height: 100px;
 	background-repeat: no-repeat;
-	background-size: contain;
+	background-position: center;
 }
 </style>
