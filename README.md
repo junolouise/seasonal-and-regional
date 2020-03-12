@@ -38,5 +38,7 @@ https://trello.com/b/D1MoWCuX/hangry
 
 https://medium.com/@katierodgers95
 
+https://medium.com@ilias_grigorop2 -Under Development-
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
