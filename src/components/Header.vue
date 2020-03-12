@@ -19,7 +19,7 @@ export default {
 
 <style scoped>
 header {
-	background: lightseagreen;
+	background: #3f8724;
 	margin-bottom: 40px;
 	padding: 10px;
 }

@@ -22,11 +22,17 @@
 				</tr>
 			</li>
 			<br><br>
-			<tr>
-				<td :style="{ color: carbonTrafficLight }"> Total carbon footprint of local/seasonal produce (CO2e): {{ Math.round(storeState.totalSeasonalCo2) }} </td>
-				<td :style="{ color: carbonTrafficLight }"> Total carbon footprint of imported produce (CO2e): {{ Math.round(storeState.totalUnseasonalCo2) }} </td>
-				</tr><tr><td> Total weight of recipe (g): {{(Math.round(storeState.recipe.totalWeight))}}</td>
-			</tr>
+			</table>
+			<table>
+				<tr>
+					<td :style="{ color: carbonTrafficLight }"> Total carbon footprint of local/seasonal produce (CO2e): {{ Math.round(storeState.totalSeasonalCo2) }} </td>
+				</tr>
+				<tr>
+					<td :style="{ color: carbonTrafficLight }"> Total carbon footprint of imported produce (CO2e): {{ Math.round(storeState.totalUnseasonalCo2) }} </td>
+				</tr>
+				<tr>
+					<td> Total weight of recipe (g): {{(Math.round(storeState.recipe.totalWeight))}}</td>
+				</tr>
 			</table>
 		</ul>
 	</div>
@@ -80,7 +86,6 @@ ul {
 	flex-wrap: wrap;
 	list-style-type: none;
 	padding: 50px;
-	border: 1px solid #222;
 	border-radius: 25px;
 	width: 40%;
 	margin: 20px;
@@ -108,19 +113,13 @@ li {
 	float: left;
 	display: block;
 }
-/* .weight {
-	float: right;
-} */
+
 table {
 	border-collapse: collapse;
 	width: 100%;
 }
 
-/* th, td {
-	border: 1px solid black;
-} */
-
 tr:nth-child(even) {
-	background-color: #e0fff2;
+	background-color: #d0edc5;
 }
 </style>
