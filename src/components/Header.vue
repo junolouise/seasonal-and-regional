@@ -19,7 +19,8 @@ export default {
 
 <style scoped>
 header {
-
+	font-weight: bold;
+	font-size: 20px;
 	background: #3f8724;
 	margin-bottom: 40px;
 	padding: 5px;
