@@ -1,7 +1,8 @@
 <template>
 	<div id="recipeDetail">
-		<h3>Recipe: {{ storeState.recipe.label }}</h3>
-		<h3>Source: {{ storeState.recipe.source }}</h3>
+		<div id="title">
+		<h3>Recipe: {{ storeState.recipe.label }}Source: {{ storeState.recipe.source }}</h3>
+		</div>
 		<div class="image" :style="{ backgroundImage: `url(${storeState.recipe.image})` }">{{ storeState.image }}</div>
 		
 		<ul>
@@ -67,9 +68,16 @@ export default {
 	padding: 0 30px;
 	box-sizing: border-box;
 	font-family: 'big caslon';
-	float: centre;
+	font-size: 18px;
+	
 }
+#title {
+	text-align: center;
+	font-family: 'big caslon';
+	font-size: 25px;
+	text-decoration: underline;
 
+}
 
 h2 {
 	border-radius: 10px;
