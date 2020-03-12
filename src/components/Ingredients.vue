@@ -96,7 +96,8 @@ export default {
 		},
 		selectedMonth: function() {
 			if (this.toggledMonth == 12) {
-				return this.foods;
+				// this line should return the original this.foods array but somehow it only works if there's some filtering going on.
+				return this.foods.filter(food => food.months.length === 12);
 			} else {
 				return this.foods.filter(food => food.months[this.toggledMonth] === 1);
 			}
