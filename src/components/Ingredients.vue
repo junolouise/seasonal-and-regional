@@ -22,7 +22,6 @@
 					footprint
 				</li>
 			</ul>
-
 			<!--	<input type="text" v-model="filterIngredients" placeholder="search ingredients" /> -->
 			<div class="line">
 				<button
@@ -61,7 +60,6 @@
 </template>
 <script>
 import { db } from '.././config/db';
-// used to store ingredients DB content for use in calculation in Recipe Detail Screen
 import { store } from '../store.js';
 export default {
 	data() {
@@ -102,7 +100,6 @@ export default {
 		},
 		selectedMonth: function() {
 			if (this.toggledMonth == 12) {
-				// this line should return the original this.foods array but somehow it only works if there's some filtering going on.
 				return this.foods.filter(food => food.months.length === 12);
 			} else {
 				return this.foods.filter(food => food.months[this.toggledMonth] === 1);
@@ -120,15 +117,7 @@ export default {
 			return str;
 		},
 	},
-	// computed: {
-	// 	filteredIngredients: function() {
-	// 		return this.foods.filter(ingredient => {
-	// 			return foods.name.match(this.filterIngredients);
-	// 		});
-	// 	},
-	// },
 	created() {
-		//db.ref('foods').once('value', storedValue => (this.foods = storedValue.val()));
 		db.ref('foods')
 			.once('value', storedValue => (this.foods = storedValue.val()))
 			.then(function(storedValue) {
@@ -217,6 +206,8 @@ ul.text {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-size: cover;
+  color:inherit;
+  text-decoration: none;
 }
 .produce {
 	width: 90%;
