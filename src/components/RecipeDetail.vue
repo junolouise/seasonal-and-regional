@@ -1,10 +1,10 @@
 <template>
 	<div id="recipeDetail">
-		<h3>Recipe: {{ storeState.recipe.label }}</h3>
-		<h3>Source: {{ storeState.recipe.source }}</h3>
-		<button v-on:click="sourceRecipe(storeState.recipe.url)">View source Recipe</button>
-
+		<div id="title">
+		<h3>Recipe: {{ storeState.recipe.label }}Source: {{ storeState.recipe.source }}</h3>
+		</div>
 		<div class="image" :style="{ backgroundImage: `url(${storeState.recipe.image})` }">{{ storeState.image }}</div>
+		
 		<ul>
 			<table>
 			<li v-for="(ingredient, index) in storeState.recipeIngredientsCarbon" :key="index">
@@ -35,7 +35,12 @@
 				</tr>
 			</table>
 		</ul>
+		<div align="right">
+		<button v-on:click="sourceRecipe(storeState.recipe.url)">View Recipe</button>
+		</div>
+
 	</div>
+		
 </template>
 <script>
 import { store } from '../store.js';
@@ -47,18 +52,14 @@ export default {
 	},
 	computed: {
 		carbonTrafficLight() {
-			
 			if (this.storeState.totalSeasonalCo2 > 2000) {
-				return "red"
-			} else if(this.storeState.totalSeasonalCo2 > 1000) {
-				return "amber"
-
+				return 'red';
+			} else if (this.storeState.totalSeasonalCo2 > 1000) {
+				return 'orange';
+			} else {
+				return 'green';
 			}
-			else {return "green"}
-			
-		}
-	
-		
+		},
 	},
 	methods: {
 		sourceRecipe: function(url) {
@@ -73,6 +74,16 @@ export default {
 	margin: 40px auto;
 	padding: 0 30px;
 	box-sizing: border-box;
+	font-family: 'big caslon';
+	font-size: 18px;
+	
+}
+#title {
+	text-align: center;
+	font-family: 'big caslon';
+	font-size: 25px;
+	text-decoration: underline;
+
 }
 
 h2 {
@@ -92,11 +103,11 @@ ul {
 }
 
 li {
-	font-family: courier, monospace;
+	font-family: 'big caslon';
 	font-size: 20px;
-	font-weight: bold;
+	font-weight: normal;
 	line-height: 1em;
-	color: purple;
+	color: black;
 	padding: 5px 15px;
 	list-style-type: circle;
 }
@@ -122,4 +133,24 @@ table {
 tr:nth-child(even) {
 	background-color: #d0edc5;
 }
+
+button {
+display: inline-block;
+background-color: #0d538c;
+border-radius: 5px;
+color: #eeeeee;
+text-align: center;
+font-size: 20px;
+padding: 10px;
+width: 150px;
+-webkit-transition: all 0.5s;
+-moz-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5px;
+font-family: 'big caslon';
+}
+
+  
 </style>

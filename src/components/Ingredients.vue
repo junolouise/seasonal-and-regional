@@ -9,9 +9,9 @@
 				<li>Locally sourced foods will naturally be in season</li>
 				<li>
 					Foods are full of flavour as they are picked at their peak of ripeness versus being harvested early
-					to be shipped
-				</li>
-				<li>Foods contain more nutrients as the older foods are, the more the nutrients deplete</li>
+					to be shipped 
+		  	</li>
+				<li>Foods contain more nutrients as the older foods are, the more the nutrients deplete </li>
 				<li>Money spent with local farmers stays close to home and is reinvested into your local economy</li>
 				<li>
 					Foods avoid a hefty carbon footprint of being imported from abroad which can add 20% onto the carbon
@@ -35,8 +35,17 @@
 			<ul>
 				<div id="produce" v-for="food in selectedMonth()" :key="food.name" @click="selectedIngredient(food)">
 					<router-link v-bind:to="'/recipes/' + food.name">
-						<li class="box" :style="{ backgroundImage: `url(${food.image})` }">
+						<li
+							class="box"
+							:style="{
+								backgroundImage: `url(${food.image})`,
+								borderColor: carbonTrafficLight(food.seasonal_co2),
+							}"
+						>
 							<h2>{{ food.name }}</h2>
+							<h3 :style="{ color: carbonTrafficLight(food.seasonal_co2) }">
+								CO2e: {{ food.seasonal_co2 }}
+							</h3>
 						</li>
 					</router-link>
 				</div>
@@ -71,13 +80,24 @@ export default {
 			toggledMonth: 0,
 		};
 	},
+	computed: {},
 	methods: {
+		carbonTrafficLight: function(co2) {
+			if (co2 > 200) {
+				return 'red';
+			} else if (co2 > 75) {
+				return 'orange';
+			} else {
+				return 'green';
+			}
+		},
 		clickOnMonth: function(number) {
 			this.toggledMonth = number;
 		},
 		selectedMonth: function() {
 			if (this.toggledMonth == 12) {
-				return this.foods;
+				// this line should return the original this.foods array but somehow it only works if there's some filtering going on.
+				return this.foods.filter(food => food.months.length === 12);
 			} else {
 				return this.foods.filter(food => food.months[this.toggledMonth] === 1);
 			}
@@ -121,8 +141,14 @@ export default {
 	padding: 0 20px;
 	box-sizing: border-box;
 }
+h2,
+h3 {
+	border-radius: 10px;
+	background: white;
+}
 a {
 	visibility: visible;
+	text-decoration: none;
 }
 ul {
 	display: flex;
@@ -158,11 +184,12 @@ ul.text {
 	flex-basis: 300px;
 	text-align: center;
 	padding: 30px;
-	border: 1px solid #222;
+	border: 5px solid #222;
 	margin: 10px;
 	min-width: 100px;
 	max-width: 200px;
 	min-height: 80px;
+	max-height: 100px;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
