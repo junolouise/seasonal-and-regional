@@ -1,5 +1,5 @@
 <template>
-<div>
+<div id = "map">
 <iframe
   width="1200"
   height="600"
@@ -16,12 +16,14 @@
 <style scoped>
 #map {
 	width: 100%;
-	margin: 40px auto;
+	margin: auto;
 	padding: 0 30px;
 	box-sizing: border-box;
+	display: flex;
+ justify-content: center
 }
 h2 {
-	border-radius: 10px;
+	border-radius: 20px;
 	background: white;
 	opacity: 70%;
 }
@@ -42,15 +44,5 @@ li {
 	color: purple;
 	padding: 5px 15px;
 	list-style-type: circle;
-}
-.gmap {
-	height: 500px;
-	width: 50%;
-	overflow: hidden;
-	background-size: cover;
-	background-position: center;
-	float: left;
-	display: block;
-	background-color: aqua;
 }
 </style>
