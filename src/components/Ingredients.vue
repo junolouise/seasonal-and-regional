@@ -148,10 +148,15 @@ export default {
 	padding: 0 20px;
 	box-sizing: border-box;
 }
-h2,
+h2 {
+	border-radius: 10px;
+	background: white;
+}
 h3 {
 	border-radius: 10px;
 	background: white;
+	width: 50%;
+	margin: auto;
 }
 
 a {
