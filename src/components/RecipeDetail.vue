@@ -66,6 +66,8 @@ export default {
 	margin: 40px auto;
 	padding: 0 30px;
 	box-sizing: border-box;
+	font-family: 'big caslon';
+	float: centre;
 }
 
 
@@ -87,11 +89,11 @@ ul {
 }
 
 li {
-	font-family: courier, monospace;
+	font-family: 'big caslon';
 	font-size: 20px;
-	font-weight: bold;
+	font-weight: normal;
 	line-height: 1em;
-	color: purple;
+	color: black;
 	padding: 5px 15px;
 	list-style-type: circle;
 }
@@ -127,6 +129,7 @@ width: 150px;
 transition: all 0.5s;
 cursor: pointer;
 margin: 5px;
+font-family: 'big caslon';
 }
 
   
