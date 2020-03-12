@@ -64,6 +64,9 @@ a {
 	visibility: visible;
 	text-decoration: none;
 }
+a:visited {
+	color: #00f
+}
 ul {
 	display: flex;
 	flex-wrap: wrap;
