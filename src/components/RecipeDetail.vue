@@ -11,15 +11,17 @@
 			<tr>	
 				<td><p>{{ ingredient.text }}</p></td>
 			</tr>
-				<tr>
-					<td class="weight">Weight: </td> <td>{{ Math.round(ingredient.weight) }} </td>
-				</tr>
-				<tr>
-					<td>Carbon footprint of local/seasonal {{ingredient.found}} (CO2e): </td><td>{{ Math.round(ingredient.seasonalCo2) }}</td>
-				</tr>
-				<tr>
-					<td>Carbon footprint of imported {{ingredient.found}} (CO2e): </td><td>{{ Math.round(ingredient.unseasonalCo2) }}</td>
-				</tr>
+				<div id = 'ingredient_details'>
+					<tr>
+						<td class="weight"> - Weight: </td> <td>{{ Math.round(ingredient.weight) }} </td>
+					</tr>
+					<tr>
+						<td> - Carbon footprint of local/seasonal {{ingredient.found}} (CO2e): </td><td>{{ Math.round(ingredient.seasonalCo2) }}</td>
+					</tr>
+					<tr>
+						<td> - Carbon footprint of imported {{ingredient.found}} (CO2e): </td><td>{{ Math.round(ingredient.unseasonalCo2) }}</td>
+					</tr>
+				</div>
 			</li>
 			<br><br>
 			</table>
@@ -122,4 +124,5 @@ table {
 tr:nth-child(even) {
 	background-color: #d0edc5;
 }
+
 </style>
