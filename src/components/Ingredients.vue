@@ -9,7 +9,7 @@
 				<li class="topText">Locally sourced foods will naturally be in season</li>
 				<li class="topText">
 					Foods are full of flavour as they are picked at their peak of ripeness versus being harvested early
-					to be shipped
+					to be shipped 
 				</li>
 				<li class="topText">
 					Foods contain more nutrients as the older foods are, the more the nutrients deplete
@@ -211,7 +211,7 @@ ul.text {
 	height: 240px;
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-size: cover;
 }
 .produce {
 	width: 90%;
