@@ -65,7 +65,7 @@ a {
 	text-decoration: none;
 }
 a:visited {
-	color: #00f
+	color: #00f;
 }
 ul {
 	display: flex;
@@ -79,10 +79,10 @@ li {
 	flex-basis: 300px;
 	text-align: center;
 	padding: 30px;
-	border: 2px solid #222;
+	border: 5px solid #222;
 	margin: 10px;
-	max-width: 240px;
-	min-height: 240px;
+	width: 240px;
+	height: 240px;
 }
 </style>
 
