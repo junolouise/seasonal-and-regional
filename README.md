@@ -8,6 +8,8 @@ Seasonal Regional runs using Vue.js and is therefore a single page app. For data
 ## Credits
 Seasonal Regional team: Katie Rodgers, Marcello Fabbri, Ria Patel, Ben Auld, Ilias Grigoropoulos and Jack Willee.
 
+<img src="Screenshot 2020-03-13 at 12.19.03.png">
+
 ## Project setup
 ```
 npm install
