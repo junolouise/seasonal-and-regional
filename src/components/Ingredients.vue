@@ -8,8 +8,7 @@
 			<ul class="text">
 				<li class="topText">Locally sourced foods will naturally be in season</li>
 				<li class="topText">
-					Foods are full of flavour as they are picked at their peak of ripeness versus being harvested early
-					to be shipped 
+					CO2e is a standard measurement of carbon emmissions here, given per 100 grams of ingredient
 				</li>
 				<li class="topText">
 					Foods contain more nutrients as the older foods are, the more the nutrients deplete
@@ -48,7 +47,7 @@
 							}"
 						>
 							<h2>{{ food.name }}</h2>
-							<h3 :style="{ color: carbonTrafficLight(food.seasonal_co2) }">
+							<h3 :style="{ color: carbonTrafficLight(food.seasonal_co2), fontWeight: 'bolder' }">
 								CO2e: {{ food.seasonal_co2 }}
 							</h3>
 						</li>
@@ -146,6 +145,7 @@ h3 {
 	background: white;
 	width: 50%;
 	margin: auto;
+	font: italic bold 20px;
 }
 
 a {
@@ -172,13 +172,11 @@ ul {
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
 	z-index: 0;
-
 	font-size: 20px;
 }
 .all {
 	position: relative;
 	float: right;
-
 	font-size: 20px;
 }
 .line {
@@ -188,6 +186,7 @@ ul {
 .text {
 	width: 60%;
 	font-size: 20px;
+	padding-left: 20px;
 }
 ul.text {
 	list-style-type: circle;
@@ -199,17 +198,20 @@ ul.text {
 	flex-basis: 300px;
 	text-align: center;
 	padding: 30px;
-	border: 5px solid #222;
+	border: 10px solid #222;
 	margin: 10px;
-	width: 240px;
-	height: 240px;
+	width: 232px;
+	height: 232px;
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-size: cover;
-  color:inherit;
-  text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 .produce {
 	width: 90%;
+}
+p {
+	font-weight: bold;
 }
 </style>
