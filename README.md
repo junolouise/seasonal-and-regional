@@ -1,4 +1,12 @@
-# seasonal
+# Seasonal Regional
+
+Seasonal regional is an app designed to allow users to make informed decisions about foods based on their envinronmental impact. Ingredients display their carbon footprint and are shown according to seasonality. Selecting an ingredient will then show a range of recipes that can be made with that ingredient. A map is shown, according to the users location, which shows local farmers markets.
+
+## Tech
+Seasonal Regional runs using Vue.js and is therefore a single page app. For database hosting, it uses Firebase.
+
+## Credits
+Seasonal Regional team: Katie Rodgers, Marcello Fabbri, Ria Patel, Ben Auld, Ilias Grigoropoulos and Jack Willee.
 
 ## Project setup
 ```
@@ -34,9 +42,7 @@ npm run lint
 
 To document our project we are using Trello and a Medium blog:
 
-https://trello.com/b/D1MoWCuX/hangry
-
 https://medium.com/@katierodgers95
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://trello.com/b/D1MoWCuX/hangry
+
